@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="122" failures="0" name="TestSuite" time="0.729" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2016.2.5"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.111-b14"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="idea.launcher.port" value="7536"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/zach/Workspace/code/idea/MyProject"/>
+    <property name="skip.maven.test" value="true"/>
+    <property name="java.runtime.version" value="1.8.0_111-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/z0/gkv_619x4z9g4x9rfcz3vg3w0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/zach/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.11.6"/>
+    <property name="user.home" value="/Users/zach"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="idea.launcher.bin.path" value="/Applications/IntelliJ IDEA.app/Contents/bin"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="zach"/>
+    <property name="java.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.4.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=2016.2.5 clean install -U -Dskip.maven.test=true"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_111"/>
+    <property name="java.ext.dirs" value="/Users/zach/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="pl.tomaszdziurko.guava.collect.BiMapTest" name="shouldAllowToPutExistingValueWithForcePut" time="0.03"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.BiMapTest" name="shouldInverseBiMap" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.BiMapTest" name="shouldNotAllowToPutExistingValue" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CaseFormatTest" name="shouldConvertToLowerCamel" time="0.007"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CaseFormatTest" name="shouldConvertToLowerHyphen" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CaseFormatTest" name="shouldConvertToUpperUnderscore" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldCollapseAllDigitsByX" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldCountDigits" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldMatchAny" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldMatchBreakingWhitespace" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldMatchChar" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldMatchDigits" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldMatchDigitsWithWhitespace" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldNotMatchChar" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRemoveAllExceptDigitsBetween3and6" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRemoveDigitsBetween3and6" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRemoveOnlyEndingDollarsAndKeepOtherUnchanged" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRemoveOnlyStartingDollarsAndKeepOtherUnchanged" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRemoveStartingAndEndingDollarsAndKeepOtherUnchanged" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRemoveStartingAndEndingDollarsOrWhitespaceAndKeepOtherUnchanged" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRemoveStartingEndEndingDollarsAndReplaceOthersWithX" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldReplaceAllDigitsByX" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRetainDigitsOrWhiteSpaces" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRetainLettersAndDigits" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRetainNothingAsConstrainsAreExcluding" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldRetainOnlyDigits" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldReturnFirstIndexOfFirstWhitespace" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharMatcherTest" name="shouldReturnLastIndexOfFirstWhitespace" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.CharsetsTest" name="shouldCreateSupportedInJavaCharset" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.Collections2Test" name="changeListToMultiMap" time="0.03"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.Collections2Test" name="shouldFilterCountriesOnlyFromAfrica" time="0.004"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.Collections2Test" name="shouldShowThatResultIsOnlyAView" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.Collections2Test" name="shouldTransformCollection" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.ConstraintsTest" name="shouldThrowExceptionOnInvalidAdd" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.ConstraintsTest" name="shouldThrowExceptionOnNullAdd" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.DiscreteDomainTest" name="shouldReturnDistance" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.DiscreteDomainTest" name="shouldReturnMaxAndMinInt" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.DiscreteDomainTest" name="shouldReturnNextInt" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.DiscreteDomainTest" name="shouldReturnPreviousInt" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.eventbus.EventBusTest" name="shouldDetectEventWithoutListeners" time="0.038"/>
+  <testcase classname="pl.tomaszdziurko.guava.eventbus.EventBusTest" name="shouldGetEventsFromSubclass" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.eventbus.EventBusTest" name="shouldNotReceiveEventAfterUnsubscribe" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.eventbus.EventBusTest" name="shouldReceiveEvent" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.eventbus.EventBusTest" name="shouldReceiveMultipleEventTypesFromBus" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.eventbus.EventBusTest" name="shouldReceiveMultipleEvents" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.ForwardingListTest" name="shouldAddOppositeNumber" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.FunctionsTest" name="shouldComposeTwoFunctions" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.FunctionsTest" name="shouldPrintCountryWithCapitalCityUpperCase" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.FunctionsTest" name="shouldUseForMapFunction" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.FunctionsTest" name="shouldUseForMapFunctionWithDefaultValue" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.FunctionsTest" name="shouldUseForMapFunctionWithNonExistingKey" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.ImmutableMapTest" name="shouldUseMapBuilder" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.ImmutableMapTest" name="shouldUseQuickMapCreator" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.math.IntMathTest" name="shouldCalculateFactorial" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.math.IntMathTest" name="shouldCalculateGreatestCommonDivisor" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.math.IntMathTest" name="shouldCalculateLogarithms" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.math.IntMathTest" name="shouldDivideWithRoundingMode" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.math.IntMathTest" name="shouldThrowExceptionWhenOverflow" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldCheckIfAtLeastOneElementIsEmptyOrNull" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldCheckLengthOfAllElements" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldConcat" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldConvertToArray" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldCountElementsInIterable" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldCycleOverIterable" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldFilterOnlyLongs" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldFilterOutSomeNumbers" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldGetFirstAndLast" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldPartition" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldRemoveNegativeNumbers" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.IterablesTest" name="shouldReturnSelectedElementWithDefValue" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.JoinerTest" name="shouldJoinMap" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.JoinerTest" name="shouldJoinWithCommas" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.JoinerTest" name="shouldJoinWithCommasAndOmitNulls" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.JoinerTest" name="shouldJoinWithCommasAndReplaceNullsWithWordNothing" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.JoinerTest" name="shouldThrowNullPointerException" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.MultimapTest" name="multiKeyTest" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.MultimapTest" name="partitionTest" time="0.003"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.MultimapTest" name="shouldTestHowMultimapWorks" time="0.008"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.MultisetTest" name="shouldAddElementTwoTimes" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.MultisetTest" name="shouldRetainOnlySelectedKeys" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.MultisetTest" name="shouldUserCustomAddRemoveAndSetCount" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.ObjectArraysTest" name="shouldAppendElement" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.ObjectArraysTest" name="shouldContactTwoArrays" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.ObjectArraysTest" name="shouldPrependElement" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.ObjectsTest" name="shouldRenderNameAsDisplayableName" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.ObjectsTest" name="shouldShowHowToStringMethodWorks" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.ObjectsTest" name="shouldTestEquals" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.ObjectsTest" name="shouldTestHashcode" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.OrderingTest" name="testOrdering" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.PreconditionsTest" name="shouldNotAcceptNotFullFootballTeam" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.PreconditionsTest" name="shouldNotAcceptNullFootballTeam" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.PreconditionsTest" name="shouldThrowIllegalState" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.PredicateTest" name="shouldCheckPattern" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.PredicateTest" name="shouldComposeTwoPredicates" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.PredicateTest" name="shouldFindObjectInCollection" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.PredicateTest" name="shouldUseCustomPredicate" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.primitives.PrimitivesTest" name="shouldConcatArrays" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.primitives.PrimitivesTest" name="shouldFindGivenNumberInArray" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.primitives.PrimitivesTest" name="shouldFindIndexOfGivenNumber" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.primitives.PrimitivesTest" name="shouldFindMaxAndMinInArray" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.primitives.PrimitivesTest" name="shouldJoinArrayUsingSeparator" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.RangesTest" name="shouldCheckThatAllElementAreInRange" time="0.004"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.RangesTest" name="shouldCheckThatElementIsInRange" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.RangesTest" name="shouldCheckThatRangeIsEnclosedInAnotherOne" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.RangesTest" name="shouldCreateRangeForGivenNumbers" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.collect.RangesTest" name="shouldGenerateSetOfElementsInRange" time="0.004"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.SplitterTest" name="shouldSplitAndOmitEmptyElementsAndWhitespaces" time="0.002"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.SplitterTest" name="shouldSplitForEqualLength" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.SplitterTest" name="shouldSplitOnRegExp" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.SplitterTest" name="shouldSplitOnSemicolons" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.SplitterTest" name="shouldSplitUsingCharMatcher" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.StopwatchTest" name="shouldCalculateIterationsTime" time="0.073"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.StopwatchTest" name="shouldPrintIterationsTime" time="0.011"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.StringsTest" name="shouldConvertEmptyToNull" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.StringsTest" name="shouldConvertNullToEmpty" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.StringsTest" name="shouldPadEnd" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.StringsTest" name="shouldPadStart" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.StringsTest" name="shouldRepeatGivenString" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.StringsTest" name="shouldReturnTrueOnNullString" time="0"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.ThrowablesTest" name="shouldExtractInnermostException" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.ThrowablesTest" name="shouldGetStackTrace" time="0.001"/>
+  <testcase classname="pl.tomaszdziurko.guava.base.ThrowablesTest" name="shouldListAllExceptionsChain" time="0.012"/>
+</testsuite>
