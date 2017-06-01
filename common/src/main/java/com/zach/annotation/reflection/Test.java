@@ -30,16 +30,19 @@ public class Test {
 
                     //生成一个Peron的类描述类  
                     Class<?> cc = Class.forName("com.zach.annotation.reflection." + beanName);
-                    //生成一个Person对象  
+                    //生成一个Person对象
                     Object ob = cc.newInstance();
                     System.out.println(field.getName());  //person
 
 
                     /**
                      * 这里就是核心方法，将Injection类的字段进行赋值就好了。
+                     * 总之是用反射将数值注入就是了
+                     * 其实数据可以放在一个结构里面，然后利用方法(就是反射里面的方法)将数据设置到对应的对象里面就好了。
                      */
                     //通过此方法将新建的实例对象赋值给 static Peron person  
-                    //如果是非static，那么set的第一个参数必须指定实例对象，也就是哪个Injection对象  
+                    //如果是非static，那么set的第一个参数必须指定实例对象，也就是哪个Injection对象
+                    //因为这是static所以就不用指明了。
                     field.set(null, ob);
 
 
