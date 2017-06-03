@@ -1,4 +1,4 @@
-package com.zach.jdkproxy;
+package com.zach.common.jdkproxy;
 
 
 import java.lang.reflect.InvocationHandler;

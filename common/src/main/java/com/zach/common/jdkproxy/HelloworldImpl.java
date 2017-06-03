@@ -1,4 +1,4 @@
-package com.zach.jdkproxy;
+package com.zach.common.jdkproxy;
 
 public class HelloworldImpl implements HelloWorld {
     public void sayHello() {

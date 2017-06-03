@@ -8,6 +8,7 @@
     <modules>
         <module>guava</module>
         <module>common</module>
+        <module>disruptor</module>
     </modules>
     <packaging>pom</packaging>
 

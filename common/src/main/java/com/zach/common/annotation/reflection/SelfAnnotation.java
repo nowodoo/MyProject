@@ -1,4 +1,4 @@
-package com.zach.annotation.reflection;
+package com.zach.common.annotation.reflection;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,4 +1,4 @@
-package com.zach.annotation;
+package com.zach.common.annotation;
 
 /**
  * Created by zach on 17/6/1.

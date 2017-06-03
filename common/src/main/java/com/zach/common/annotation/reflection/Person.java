@@ -1,4 +1,4 @@
-package com.zach.annotation.reflection;
+package com.zach.common.annotation.reflection;
 
 /**
  * 对应的bean类

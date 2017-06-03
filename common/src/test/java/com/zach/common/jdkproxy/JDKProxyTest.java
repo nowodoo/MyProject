@@ -1,11 +1,8 @@
-package com.zach.jdkproxy;
+package com.zach.common.jdkproxy;
 
 
 import org.testng.annotations.Test;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Proxy;
 
 public class JDKProxyTest {

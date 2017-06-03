@@ -1,4 +1,4 @@
-package com.zach.jdkproxy;
+package com.zach.common.jdkproxy;
 
 public interface HelloWorld {
     void sayHello();
