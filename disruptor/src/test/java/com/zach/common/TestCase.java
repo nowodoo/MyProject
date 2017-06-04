@@ -11,4 +11,13 @@ public class TestCase {
         System.out.println(System.nanoTime());
     }
 
+    @Test
+    public void testCount() {
+        long ITERATIONS = 500L * 1000L * 1000L;
+
+        for (int i = 0; i < ITERATIONS; i++) {
+            System.out.println(--ITERATIONS);
+        }
+    }
+
 }
