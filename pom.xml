@@ -67,7 +67,7 @@
         </dependency>
 
 
-        <!--other dependencies for project disruptor-->s
+        <!--other dependencies for project disruptor-->
         <dependency>
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
