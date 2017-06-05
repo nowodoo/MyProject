@@ -9,6 +9,7 @@
         <module>guava</module>
         <module>common</module>
         <module>disruptor</module>
+        <module>web</module>
     </modules>
     <packaging>pom</packaging>
 
