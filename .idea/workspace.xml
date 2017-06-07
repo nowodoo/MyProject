@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b2f93cb-d72a-4ead-a5ee-85dbd4f74000" name="Default" comment="LOG-3 添加伪共享测试代码。">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/disruptor/disruptor.iml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/zach/common/jdkproxy/App.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/zach/common/jdkproxy/AppTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyProject.iml" afterPath="$PROJECT_DIR$/MyProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common.iml" afterPath="$PROJECT_DIR$/common/common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guava/guava.iml" afterPath="$PROJECT_DIR$/guava/guava.iml" />
     </list>
     <ignored path="MyProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +64,8 @@
       <file leaf-file-name="MyProject.iml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyProject.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            <state relative-caret-position="195">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -1198,7 +1189,7 @@
       <updated>1496150705977</updated>
       <workItem from="1496150710755" duration="5703000" />
       <workItem from="1496322117370" duration="16605000" />
-      <workItem from="1496547417728" duration="10974000" />
+      <workItem from="1496547417728" duration="11185000" />
     </task>
     <task id="LOCAL-00001" summary="LOG-3 jdkProxy add jdkProxy basic test.">
       <created>1496322245864</created>
@@ -1319,7 +1310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496845442537</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="LOG-3 提交不幸的iml文件。">
+      <created>1496845665653</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1496845665653</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1346,7 +1344,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33282000" />
+    <option name="totallyTimeSpent" value="33493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
@@ -1439,7 +1437,8 @@
     <MESSAGE value="LOG-3 修改gitignore。" />
     <MESSAGE value="LOG-3 添加伪共享测试代码。" />
     <MESSAGE value="LOG-3 gitignore。" />
-    <option name="LAST_COMMIT_MESSAGE" value="LOG-3 gitignore。" />
+    <MESSAGE value="LOG-3 提交不幸的iml文件。" />
+    <option name="LAST_COMMIT_MESSAGE" value="LOG-3 提交不幸的iml文件。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1869,8 +1868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyProject.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state relative-caret-position="195">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
           <folding />
         </state>
       </provider>
