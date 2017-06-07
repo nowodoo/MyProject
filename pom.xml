@@ -10,6 +10,7 @@
         <module>common</module>
         <module>disruptor</module>
         <module>web</module>
+        <module>redis</module>
     </modules>
     <packaging>pom</packaging>
 
