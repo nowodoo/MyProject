@@ -11,6 +11,7 @@
         <module>disruptor</module>
         <module>web</module>
         <module>redis</module>
+        <module>springData</module>
     </modules>
     <packaging>pom</packaging>
 
