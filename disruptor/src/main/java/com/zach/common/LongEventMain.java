@@ -7,6 +7,9 @@ import java.nio.ByteBuffer;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
+/**
+ * 用来启动的主类
+ */
 public class LongEventMain
 {
     public static void main(String[] args) throws Exception
