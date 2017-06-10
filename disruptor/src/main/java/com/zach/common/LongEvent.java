@@ -1,7 +1,5 @@
 package com.zach.common;
 
-import javafx.beans.NamedArg;
-
 public class LongEvent {
     private long value;
 
