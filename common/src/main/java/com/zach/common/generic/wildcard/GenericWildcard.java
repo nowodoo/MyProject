@@ -20,7 +20,7 @@ public class GenericWildcard {
     }
 
 
-    //下面是解决方案
+    //下面是解决方案（泛型方法总是在返回值前面添加泛型）
     private <E> void swapInternal(List<E> list, int i, int j) {
         list.set(i, list.set(j, list.get(i)));
     }

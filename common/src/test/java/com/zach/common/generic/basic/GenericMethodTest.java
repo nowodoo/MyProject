@@ -7,8 +7,11 @@ import org.testng.annotations.Test;
  */
 public class GenericMethodTest {
 
+    /**
+     * 测试泛型方法
+     */
     @Test
-    public void test() {
+    public void testGenericMethod() {
         GenericMethod genericMethod = new GenericMethod();
         String result = genericMethod.ifThenElse(false, "1", "2");
         System.out.println(result);
