@@ -200,6 +200,57 @@ public class Coder {
 		return cipher.doFinal(data);
 	}
 
+	/**
+     *	数字签名：   用私钥对信息生成数字签名  签名:(其实就是加密)
+     * @param data	//加密数据
+     * @param privateKey	//私钥
+     * @return
+     * @throws Exception
+     */
+    public static String sign(byte[] data,String privateKey)throws Exception{
+
+
+        //解密私钥   说明这里需要真正的私钥，并不是经过base64加密的私钥。
+        byte[] keyBytes = decryptBASE64(privateKey);
+        //构造PKCS8EncodedKeySpec对象
+        PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(keyBytes);
+        //指定加密算法
+        KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORTHM);
+        //取私钥匙对象
+        PrivateKey privateKey2 = keyFactory.generatePrivate(pkcs8EncodedKeySpec);
+        //用私钥对信息生成数字签名
+        Signature signature = Signature.getInstance(SIGNATURE_ALGORITHM);
+        signature.initSign(privateKey2);
+        signature.update(data);
+
+        return encryptBASE64(signature.sign());
+    }
+    /**
+     * 数字签名：   校验数字签名 验签（其实就是解密）
+     * @param data	加密数据
+     * @param publicKey	公钥
+     * @param sign	数字签名
+     * @return
+     * @throws Exception
+     */
+    public static boolean verify(byte[] data,String publicKey,String sign)throws Exception{
+        //解密公钥
+        byte[] keyBytes = decryptBASE64(publicKey);
+        //构造X509EncodedKeySpec对象
+        X509EncodedKeySpec x509EncodedKeySpec = new X509EncodedKeySpec(keyBytes);
+        //指定加密算法
+        KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORTHM);
+        //取公钥匙对象
+        PublicKey publicKey2 = keyFactory.generatePublic(x509EncodedKeySpec);
+
+        Signature signature = Signature.getInstance(SIGNATURE_ALGORITHM);
+        signature.initVerify(publicKey2);
+        signature.update(data);
+        //验证签名是否正常
+        return signature.verify(decryptBASE64(sign));
+
+    }
+
 
 
 }

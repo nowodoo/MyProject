@@ -114,4 +114,35 @@ public class CipherTest {
         System.out.println(decryptResultStr);
 
     }
+
+    /**
+     * 生成签名和验证签名的操作
+     * 生成签名： 私钥&加密好的数据 生成一个签名(String)
+     * 验签： 利用 公钥 & 加密好的数据 & 签名 == 得出数据是不是正确的
+     * @throws Exception
+     */
+    @Test
+    public void test7() throws Exception {
+        //获取公钥和私钥
+        Map<String, Object> resultMap = Coder.initKey();
+        String privateKey = Coder.getPrivateKey(resultMap);
+        String publicKey = Coder.getPublicKey(resultMap);
+
+
+        //模拟数据
+        String inuptStr = "data";
+        byte[] data = inuptStr.getBytes();
+
+
+        //使用私钥加密、公钥解密
+        byte[] encryptResultByte = Coder.encryptByPrivateKey(data, privateKey);
+        byte[] decryptResultByte = Coder.decryptByPublicKey(encryptResultByte, publicKey);
+
+
+        //将加密的数据生成签名：
+        String signStr = Coder.sign(encryptResultByte, privateKey);
+        //进行验签的操作
+        boolean signResult = Coder.verify(encryptResultByte, publicKey, signStr);
+        System.out.println("verify sign complete !");
+    }
 }
