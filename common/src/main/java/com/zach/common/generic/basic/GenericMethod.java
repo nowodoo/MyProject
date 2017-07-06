@@ -10,7 +10,7 @@ public class GenericMethod {
      * @param first
      * @param second
      * @param <T>
-     * @return
+     * @returnS
      */
     public <T> T ifThenElse(boolean b, T first, T second) {
         return b ? first : second;
