@@ -67,6 +67,10 @@ public class CipherTest {
     }
 
 
+    /**
+     * 使用私钥加密、公钥解密
+     * @throws Exception
+     */
     @Test
     public void test5() throws Exception {
 
@@ -86,5 +90,28 @@ public class CipherTest {
 
         String decryptResultStr = new String(decryptResultByte);
         System.out.println(decryptResultStr);
+    }
+
+
+    //公钥加密，私钥解密
+    @Test
+    public void test6() throws Exception {
+        //获取公钥和私钥
+        Map<String, Object> resultMap = Coder.initKey();
+        String privateKey = Coder.getPrivateKey(resultMap);
+        String publicKey = Coder.getPublicKey(resultMap);
+
+
+        //模拟数据
+        String inuptStr = "data1";
+        byte[] data = inuptStr.getBytes();
+
+        //使用私钥加密、公钥解密
+        byte[] encryptResultByte = Coder.encryptByPublicKey(data, publicKey);
+        byte[] decryptResultByte = Coder.decryptByPrivateKey(encryptResultByte, privateKey);
+
+        String decryptResultStr = new String(decryptResultByte);
+        System.out.println(decryptResultStr);
+
     }
 }
