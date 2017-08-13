@@ -14,6 +14,7 @@
         <module>springData</module>
         <module>rocketmq</module>
         <module>multithread</module>
+        <module>pic</module>
     </modules>
     <packaging>pom</packaging>
 
