@@ -13,6 +13,7 @@
         <module>redis</module>
         <module>springData</module>
         <module>rocketmq</module>
+        <module>multithread</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -81,7 +81,7 @@ public class MultimapTest {
 
 
         //自己输出一下结果就知道了
-        System.out.println(partitionedMap);
+        System.out.println(partitionedMap.get("4"));
     }
 
     @Test
