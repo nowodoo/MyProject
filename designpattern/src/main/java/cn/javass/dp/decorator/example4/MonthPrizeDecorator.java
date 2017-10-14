@@ -6,7 +6,7 @@ import java.util.Date;
  */
 public class MonthPrizeDecorator extends Decorator{
 	public MonthPrizeDecorator(Component c){
-		super(c);
+		super(c);  //调用父类的构造函数
 	}
 	
 	public double calcPrize(String user, Date begin, Date end) {
