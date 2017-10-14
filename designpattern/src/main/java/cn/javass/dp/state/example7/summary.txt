@@ -1,0 +1,8 @@
+1.状态机模式
+
+
+2.
+stateMachine封装了state的doWork的方法，代理了一把。uml图在书的522页。
+
+
+3.

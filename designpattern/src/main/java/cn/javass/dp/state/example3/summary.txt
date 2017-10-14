@@ -1,0 +1,13 @@
+normalVoteState2实际是对mormalVoteState的扩展，两个其实是一个。
+添加这个类的原因就是要在原有的normalVoteState上添加了新的逻辑，所以这里需要修改。
+但是在VoteManager中也是需要修改相应的代码，在判断状态的时候，需要把原先的类替换掉（就是VoteManager中判断状态的时候需要添加一个新类）
+
+
+voteManager和voteManager2这两个只需要关心一个就好了，这里client只是调用其中一个。
+
+
+这里voteManager只是状态的一个上下文罢了。
+
+
+over
+

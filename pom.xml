@@ -16,6 +16,7 @@
         <module>multithread</module>
         <module>pic</module>
         <module>jvm</module>
+        <module>designpattern</module>
     </modules>
     <packaging>pom</packaging>
 

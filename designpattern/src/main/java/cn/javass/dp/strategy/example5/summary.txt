@@ -1,0 +1,1 @@
+看一下uml图就明白了，注意PaymentContext2在构造的时候需要先构造一下父类PaymentContext。

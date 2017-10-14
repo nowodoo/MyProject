@@ -1,0 +1,2 @@
+order 和 order 都实现了orderApi client调用orderProxy实际是调用Order。
+总结：也就是说代理和真实的类都要有相同的接口。

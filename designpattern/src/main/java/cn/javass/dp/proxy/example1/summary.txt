@@ -1,0 +1,1 @@
+使用UserManager取出数据库的用户，放在用户模型里面(UserModel)
