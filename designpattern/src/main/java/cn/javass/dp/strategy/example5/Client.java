@@ -5,7 +5,11 @@ public class Client {
 		//创建相应的支付策略
 		PaymentStrategy strategyRMB = new RMBCash();
 		PaymentStrategy strategyDollar = new DollarCash();
-		
+
+
+		//下面只是传入策略，但是并没有判断使用哪个策略。
+
+
 		//准备小李的支付工资上下文
 		PaymentContext ctx1 = new PaymentContext("小李",5000,strategyRMB);
 		//向小李支付工资
