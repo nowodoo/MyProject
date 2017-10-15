@@ -33,7 +33,7 @@ public class Client {
 		ctx3.payNow();
 
 		//测试新添加的支付方式
-		PaymentStrategy strategyCard2 = new Card2("010998877656");    //在这里，策略多了一个参数。
+		PaymentStrategy strategyCard2 = new Card2("010998877656");    //在这里，策略多了一个参数。   这种扩展方式，使得一部分的数据来源于上下文，另一部分数据来源于策略自己的扩展。
 		PaymentContext ctx4 = new PaymentContext("小张",9000,strategyCard2);
 		ctx4.payNow();
 	}
