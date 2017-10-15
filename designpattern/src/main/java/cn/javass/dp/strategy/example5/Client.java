@@ -18,14 +18,22 @@ public class Client {
 		//切换一个人，给petter支付工资
 		PaymentContext ctx2 = new PaymentContext("Petter",8000,strategyDollar);
 		ctx2.payNow();
-		
+
+
+
+
+		//后面两种是不同的扩展形式，一种是扩展上下文，另一种是扩展策略。
+
+
+
+
 		//测试新添加的支付方式
 		PaymentStrategy strategyCard = new Card();
-		PaymentContext ctx3 = new PaymentContext2("小王",9000,"010998877656",strategyCard);
+		PaymentContext ctx3 = new PaymentContext2("小王",9000,"010998877656",strategyCard);   //这里让上下文对象多了一个参数。
 		ctx3.payNow();
-		
+
 		//测试新添加的支付方式
-		PaymentStrategy strategyCard2 = new Card2("010998877656");
+		PaymentStrategy strategyCard2 = new Card2("010998877656");    //在这里，策略多了一个参数。
 		PaymentContext ctx4 = new PaymentContext("小张",9000,strategyCard2);
 		ctx4.payNow();
 	}

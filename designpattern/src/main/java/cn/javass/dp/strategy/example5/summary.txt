@@ -1,2 +1,8 @@
 看一下uml图就明白了，注意PaymentContext2在构造的时候需要先构造一下父类PaymentContext。
 PaymentContext2继承了PaymentContext，用来扩展原先的上下文。
+PaymentContext2扩展只是通过构造函数进行扩展。
+
+
+需要将策略传给上下文，是用上下文执行里面的策略的。
+
+paymentcontext2 & card2分别是另种扩展形式。一种是改变上下文扩展，另一种是改变策略进行扩展。
