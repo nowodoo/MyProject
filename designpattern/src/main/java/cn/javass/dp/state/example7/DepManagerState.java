@@ -1,6 +1,7 @@
 package cn.javass.dp.state.example7;
 
 /**
+ * 对应部门经理的审核状态
  * 处理部门经理的审核，处理后对应审核结束状态
  */
 public class DepManagerState implements LeaveRequestState{

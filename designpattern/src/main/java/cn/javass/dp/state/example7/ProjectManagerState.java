@@ -1,6 +1,7 @@
 package cn.javass.dp.state.example7;
 
 /**
+ * 项目经理的审核状态
  * 处理项目经理的审核，处理后可能对应部门经理审核、审核结束之中的一种
  */
 public class ProjectManagerState implements LeaveRequestState{	
