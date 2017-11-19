@@ -17,6 +17,7 @@
         <module>pic</module>
         <module>jvm</module>
         <module>designpattern</module>
+        <module>util</module>
     </modules>
     <packaging>pom</packaging>
 

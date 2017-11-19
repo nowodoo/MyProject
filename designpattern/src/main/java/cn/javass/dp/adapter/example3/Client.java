@@ -2,30 +2,30 @@ package cn.javass.dp.adapter.example3;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//×¼±¸ÈÕÖ¾ÄÚÈÝ£¬Ò²¾ÍÊÇ²âÊÔµÄÊý¾Ý
+		//×¼ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ý£ï¿½Ò²ï¿½ï¿½ï¿½Ç²ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½
 		LogModel lm1 = new LogModel();
 		lm1.setLogId("001");
 		lm1.setOperateUser("admin");
 		lm1.setOperateTime("2010-03-02 10:08:18");
-		lm1.setLogContent("ÕâÊÇÒ»¸ö²âÊÔ");
+		lm1.setLogContent("ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		
 		List<LogModel> list = new ArrayList<LogModel>();
 		list.add(lm1);
 
-		//´´½¨²Ù×÷ÈÕÖ¾ÎÄ¼þµÄ¶ÔÏó
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ä¼ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
 		LogFileOperateApi logFileApi = new LogFileOperate("");
 		
-		//´´½¨ÐÂ°æµÄ²Ù×÷ÈÕÖ¾µÄ½Ó¿Ú¶ÔÏó
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Â°ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ä½Ó¿Ú¶ï¿½ï¿½ï¿½
 		LogDbOperateApi api = new MyAdapter(logFileApi,new TimeUtil()); 
 		
-//		LogDbOperateApi api = null;
+//		LogDbOperateApi range = null;
 		
 		
-		/////////////////////////ÕæÕýµÄ²Ù×÷
-		//±£´æÈÕÖ¾ÎÄ¼þ
+		/////////////////////////ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ä¼ï¿½
 		api.createLog(lm1);
 		
-		//¶ÁÈ¡ÈÕÖ¾ÎÄ¼þµÄÄÚÈÝ
+		//ï¿½ï¿½È¡ï¿½ï¿½Ö¾ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		List<LogModel> allLog = api.getAllLog();
 		System.out.println("allLog44="+allLog);
 	}
