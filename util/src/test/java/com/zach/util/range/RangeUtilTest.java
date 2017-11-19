@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class RangeUtilTest {
 
@@ -16,8 +17,13 @@ public class RangeUtilTest {
         }
         int length = 10;
 
-
         List<List<Integer>> segmemts = RangeUtil.getSegments(strings, length);
         System.out.println("hello");
+    }
+
+    @Test
+    public void test2() {
+        List<Map<String, Long>> segments = RangeUtil.getSegments(100L, 88);
+        System.out.println(segments);
     }
 }
