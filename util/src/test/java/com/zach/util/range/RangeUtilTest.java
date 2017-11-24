@@ -1,6 +1,7 @@
 package com.zach.util.range;
 
 import com.google.common.collect.Lists;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -25,5 +26,11 @@ public class RangeUtilTest {
     public void test2() {
         List<Map<String, Long>> segments = RangeUtil.getSegments(100L, 88);
         System.out.println(segments);
+    }
+
+    @Test
+    public void test3() {
+
+
     }
 }
