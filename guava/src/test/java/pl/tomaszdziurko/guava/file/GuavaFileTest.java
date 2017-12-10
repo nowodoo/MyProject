@@ -80,5 +80,16 @@ public class GuavaFileTest {
         Files.write(overwrite, file, Charsets.UTF_8); //重写文件
     }
 
-
+    /**
+     * 删除文件
+     *
+     * @throws Exception
+     */
+    @Test(expectedExceptions = ArithmeticException.class, expectedExceptionsMessageRegExp = "overflow")
+    public void deleteFile() throws Exception {
+        File file = new File("quote1.txt");
+        if(file.exists() && !file.isDirectory()) {
+            file.delete(); //delete it
+        }
+    }
 }
