@@ -23,7 +23,7 @@ public class FileTest {
     @Test
     public void shouldConvertToUpperUnderscore() throws Exception {
 
-        String testFilePath = "/Users/zach/Desktop/code.txt";
+        String testFilePath = "/Users/zach/Workspace/code/idea/MyProject/guava/src/test/java/pl/tomaszdziurko/guava/byyourself/code.txt";
         File testFile = new File(testFilePath);
         CounterLine counter = new CounterLine();
 //        Files.readLines(testFile, Charsets.UTF_8, counter);
@@ -42,12 +42,13 @@ public class FileTest {
 
             while (m.find()) {
                 String group = m.group();
-                group = group.replace("<OrderNo>", "");
-                group = group.replace("</OrderNo>", "");
+                group = group.replace("<OrderNo>", "'");
+                group = group.replace("</OrderNo>", "'");
                 result.add(group);
             }
         }
 
+        System.out.println(result.size());
         System.out.println(result);
     }
 

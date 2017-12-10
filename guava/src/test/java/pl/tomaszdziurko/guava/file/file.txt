@@ -1,0 +1,131 @@
+﻿﻿https://my.oschina.net/indestiny/blog/219802
+走近Guava(七): 文件操作
+ 收藏
+ihaolin
+发表于 3年前 阅读 2154 收藏 5 点赞 0 评论 0
+摘要: 走近Guava(七): 文件操作
+文件操作：
+复制文件
+File original  = new File("path/to/original");
+File copy = new File("path/to/copy");
+Files.copy(original, copy);
+文件移动/重命名
+File original = new File("src/main/resources/copy.txt");
+File newFile = new File("src/main/resources/newFile.txt");
+try{
+   Files.move(original, newFile); //移动或重命名文件，类似Unix中的mv
+}catch (IOException e){
+   e.printStackTrace();
+}
+将文件读取为字符串列表
+List<String> readLines = Files.readLines(file, Charsets.UTF_8);
+为文件生成hash值
+File file = new File("src/main/resources/sampleTextFileOne.txt");
+HashCode hashCode = Files.hash(file, Hashing.md5());
+System.out.println(hashCode);
+写或追加文件
+File file = new File("quote1.txt");
+String hamletQuoteStart = "To be, or not to be";
+Files.write(hamletQuoteStart,file, Charsets.UTF_8);//写文件
+
+String hamletQuoteEnd = ",that is the question";
+Files.append(hamletQuoteEnd,file,Charsets.UTF_8); //追加文件
+
+String overwrite = "Overwriting the file";
+Files.write(overwrite, file, Charsets.UTF_8); //重写文件
+ByteSource类
+ByteSource代表一个可读的字节源
+从文件创建ByteSource
+File f1 = new File("quote1.txt");
+ByteSource byteSource = Files.asByteSource(f1);
+byte[] readBytes = byteSource.read();
+System.out.println(readBytes);
+ByteSink类
+ByteSink代表一个可写的字节源
+创建ByteSink
+File dest = new File("destfile.txt");
+ByteSink byteSink = Files.asByteSink(dest);
+File file = new File("srcfile.txt");
+byteSink.write(Files.toByteArray(file));
+将ByteSource复制到ByteSink
+File dest = new File("destfile.txt");
+File source = new File("srcfile.txt");
+ByteSource byteSource = Files.asByteSource(source);
+ByteSink byteSink = Files.asByteSink(dest);
+byteSource.copyTo(byteSink);
+ByteStreams和CharStreams
+限制输入流大小
+ByteStreams.limit(inputStream, 10)
+合并CharStreams
+@Test
+public void joinCharStreamsTest() throws Exception {
+	File f1 = new File("file1.txt");
+	File f2 = new File("file2.txt");
+	File f3 = new File("file3.txt");
+	File joinedOutput = new File("file123.txt");
+
+	List<InputSupplier<InputStreamReader>> inputSuppliers = getInputSuppliers(f1, f2, f3);
+       InputSupplier<Reader> joinedSupplier = CharStreams.join(inputSuppliers);
+	OutputSupplier<OutputStreamWriter> outputSupplier = Files.newWriterSupplier(joinedOutput, Charsets.UTF_8);
+	CharStreams.copy(joinedSupplier, outputSupplier);
+	String joinedOutputString = joinFiles(joinedOutput);
+	System.out.println(joinedOutputString);
+}
+//将多个文件合并为字符串
+private String joinFiles(File... files) throws IOException {
+	StringBuilder builder = new StringBuilder();
+	for (File file : files) {
+		builder.append(Files.toString(file, Charsets.UTF_8));
+	}
+	return builder.toString();
+}
+//将多个文件转换为InputSuppler<InputStreamReader>类型的列表
+private List<InputSupplier<InputStreamReader>> getInputSuppliers(File... files) {
+	List<InputSupplier<InputStreamReader>> list = Lists.newArrayList();
+	for (File file : files) {
+		list.add(Files.newReaderSupplier(file, Charsets.UTF_8));
+	}
+	return list;
+}
+Closer类
+Closer可以保证注册的Closable对象，在Closer关闭时，注册的Closable对象也会被关闭。
+Closer closer = Closer.create();
+try {
+	File destination = new File("destfile.txt");
+	BufferedReader reader = new BufferedReader(new FileReader("srcfile.txt"));
+	BufferedWriter writer = new BufferedWriter(new FileWriter(destination));
+	closer.register(reader);
+	closer.register(writer);
+	String line;
+	while ((line = reader.readLine()) != null) {
+		writer.write(line);
+	}
+} catch (Throwable t) {
+	throw closer.rethrow(t);
+} finally {
+	closer.close();
+}
+BaseEncoding类
+BaseEncoding针对字节码的编码工作。
+一些用例
+@Test
+public void encodeDecodeTest() throws Exception {
+	File file = new File("srcfile.txt");
+	byte[] bytes = Files.toByteArray(file);
+	BaseEncoding baseEncoding = BaseEncoding.base64();
+	String encoded = baseEncoding.encode(bytes); // 将字节以Base64编码
+}
+
+@Test
+public void encodeByteSinkTest() throws Exception {
+	File srcFile = new File("srcfile.txt");
+	File encodedFile = new File("encodedfile.txt");
+	CharSink charSink = Files.asCharSink(encodedFile, Charsets.UTF_8);
+	BaseEncoding baseEncoding = BaseEncoding.base64();
+	ByteSink byteSink = baseEncoding.encodingSink(charSink); //将charSink转为ByteSink
+	ByteSource byteSource = Files.asByteSource(srcFile);
+	byteSource.copyTo(byteSink); //copy ByteSource to ByteSink
+	String encodedBytes = baseEncoding.encode(byteSource.read());
+}
+以上就是Guava的文件处理。
+不吝指正。
