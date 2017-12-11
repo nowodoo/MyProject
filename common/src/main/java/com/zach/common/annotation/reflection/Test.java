@@ -73,6 +73,5 @@ public class Test {
         //因为 static Peron person，所以新建的Injectin对象的Peron对象都是通过反射最后赋值过得  
         Injection injection = new Injection();
         System.out.println(injection.person.getName() + "," + injection.person.getAge());
-
     }
 }  
