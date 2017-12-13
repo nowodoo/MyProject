@@ -32,7 +32,7 @@ public class ZipUtils {
       if (!targetDir.exists()) {
           targetDir.mkdirs();
       }
-      InputStream in = new BufferedInputStream(url.openStream(), 10240);
+      InputStream in = new BufferedInputStream(url.openStream(), 1024);
       // make sure we get the actual file
       File zip = File.createTempFile("arc", ".zip", targetDir);
       OutputStream out = new BufferedOutputStream(new FileOutputStream(zip));
@@ -91,7 +91,7 @@ public class ZipUtils {
   }
 
   public static void copyInputStream(InputStream in, OutputStream out) throws IOException {
-      byte[] buffer = new byte[10240];
+      byte[] buffer = new byte[1024];
       int len = in.read(buffer);
       while (len >= 0) {
           out.write(buffer, 0, len);
