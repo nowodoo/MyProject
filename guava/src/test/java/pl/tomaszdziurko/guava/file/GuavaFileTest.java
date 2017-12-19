@@ -59,7 +59,7 @@ public class GuavaFileTest {
     @Test(expectedExceptions = ArithmeticException.class, expectedExceptionsMessageRegExp = "overflow")
     public void readFilesToHash() throws Exception {
         File file = new File("src/main/resources/copy.txt");
-        HashCode hashCode = Files.hash(file, Hashing.md5());
+//        HashCode hashCode = Files.hash(file, Hashing.md5());
     }
 
     /**

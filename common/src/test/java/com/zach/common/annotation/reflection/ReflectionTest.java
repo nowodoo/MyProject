@@ -1,5 +1,6 @@
 package com.zach.common.annotation.reflection;
 
+import com.alibaba.fastjson.JSON;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Field;
@@ -16,7 +17,7 @@ public class ReflectionTest {
         Person propertiesUtil = new Person();
         Field[] declaredFields = propertiesUtil.getClass().getDeclaredFields();
 
-        Map<String, String> resultMap = new HashMap<>();
+        Map<String, String> resultMap = new HashMap<String, String>();
 
         for (int i = 0; i < declaredFields.length; i++) {
             String key = declaredFields[i].getName();
@@ -29,7 +30,6 @@ public class ReflectionTest {
             }
             resultMap.put(key, value.toString());
         }
-
-        return JSON.toJSONString(resultMap);
+        JSON.toJSONString(resultMap);
     }
 }
