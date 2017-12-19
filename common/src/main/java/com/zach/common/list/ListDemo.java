@@ -7,10 +7,15 @@ public class ListDemo {
 
     public static void main(String[] args) {
         ArrayList<String> dbList = new ArrayList<String>();
+        dbList.add("1");
+        dbList.add("2");
+        dbList.add("3");
         ArrayList<String> logList = new ArrayList<String>();
+        logList.add("3");
+        logList.add("4");
 
 
-        ArrayList<Object> all = new ArrayList<>();
+        ArrayList<String> all = new ArrayList<String>();
         all.addAll(dbList);
         all.addAll(logList);
 
@@ -19,8 +24,8 @@ public class ListDemo {
 
 
         //deduplicate
-        HashSet<String> dbSet = new HashSet<>(dbList);
-        HashSet<String> logSet = new HashSet<>(logList);
+        HashSet<String> dbSet = new HashSet<String>(dbList);
+        HashSet<String> logSet = new HashSet<String>(logList);
 
 
         //intersection
