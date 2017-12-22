@@ -1,7 +1,7 @@
 package cn.javass.dp.command.example5;
 
 /**
- * ÃüÁî¶ÔÏó£¬ËâÄà°×Èâ
+ * Ğ“ÑŒĞ‘Ğ¾Â¶Ğ¤ĞŸÑƒĞˆÂ¬Ğ›Ğ²Ğ”Ğ°Â°Ğ§Ğ˜Ğ²
  */
 public class PorkCommand implements Command {
 	private CookApi cookApi = null;
@@ -12,6 +12,6 @@ public class PorkCommand implements Command {
 
 	
 	public void execute() {
-		this.cookApi.cook("ËâÄà°×Èâ");
+		this.cookApi.cook("Ğ›Ğ²Ğ”Ğ°Â°Ğ§Ğ˜Ğ²");
 	}
 }

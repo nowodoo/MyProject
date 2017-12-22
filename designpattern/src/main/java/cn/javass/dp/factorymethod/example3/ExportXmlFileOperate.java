@@ -1,6 +1,6 @@
 package cn.javass.dp.factorymethod.example3;
 /**
- * 导出成文本文件格式的对象
+ * 瀵煎嚭鎴愭枃鏈枃浠舵牸寮忕殑瀵硅薄
  */
 public class ExportXmlFileOperate extends ExportOperate{
 

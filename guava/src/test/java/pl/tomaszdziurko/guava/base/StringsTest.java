@@ -28,7 +28,7 @@ public class StringsTest {
     @Test
     public void shouldPadEnd() throws Exception {
 
-        //Õâ¸öÊÇÓÃÀ´²»È«µÄ£¬Ò»¹²¶àÉÙ¸ö×Ö·û£¬È»ºóÊÇÓÃ¶àÉÙ¸ö²¹È«Õû¸ö×Ö·û¡£
+        //è¿™ä¸ªæ˜¯ç”¨æ¥ä¸å…¨çš„ï¼Œä¸€å…±å¤šå°‘ä¸ªå­—ç¬¦ï¼Œç„¶åæ˜¯ç”¨å¤šå°‘ä¸ªè¡¥å…¨æ•´ä¸ªå­—ç¬¦ã€‚
 
         assertThat(Strings.padEnd("Nothing special", 20, '*')).isEqualTo("Nothing special*****");
     }
@@ -36,7 +36,7 @@ public class StringsTest {
     @Test
     public void shouldPadStart() throws Exception {
 
-        //ÔÚ¾äÊ×²¹È«µ½Ò»¶¨µÄ³¤¶È¡£
+        //åœ¨å¥é¦–è¡¥å…¨åˆ°ä¸€å®šçš„é•¿åº¦ã€‚
 
         assertThat(Strings.padStart("Nothing special", 20, ' ')).isEqualTo("     Nothing special");
     }
@@ -44,7 +44,7 @@ public class StringsTest {
     @Test
     public void shouldRepeatGivenString() throws Exception {
 
-        //½«×Ö·û½øĞĞÖØ¸´ĞÔÕ¹Ê¾£¬¾ÍÊÇÖØ¸´Õ¹Ê¾Ò»¸ö×Ö·û°ÕÁË¡£
+        //å°†å­—ç¬¦è¿›è¡Œé‡å¤æ€§å±•ç¤ºï¼Œå°±æ˜¯é‡å¤å±•ç¤ºä¸€ä¸ªå­—ç¬¦ç½¢äº†ã€‚
 
         assertThat(Strings.repeat("Hello ", 3)).isEqualTo("Hello Hello Hello ");
     }

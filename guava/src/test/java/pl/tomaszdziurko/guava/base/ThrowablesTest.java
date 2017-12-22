@@ -31,7 +31,7 @@ public class ThrowablesTest {
         }
         catch(Exception e) {
 
-            //»ñÈ¡Ö®Ç°ËùÓĞµÄ·½·¨Å×³öµÄÒì³£
+            //è·å–ä¹‹å‰æ‰€æœ‰çš„æ–¹æ³•æŠ›å‡ºçš„å¼‚å¸¸
 
             List<Throwable> exceptionsChain = Throwables.getCausalChain(e);
             assertThat(exceptionsChain).onProperty("message")
@@ -57,7 +57,7 @@ public class ThrowablesTest {
         }
         catch(Exception e) {
 
-            //»ñÈ¡×î¸ù±¾µÄÒì³£ĞÅÏ¢
+            //è·å–æœ€æ ¹æœ¬çš„å¼‚å¸¸ä¿¡æ¯
 
             assertThat(Throwables.getRootCause(e).getMessage()).isEqualTo("Innermost exception");
         }
@@ -81,7 +81,7 @@ public class ThrowablesTest {
         }
         catch(Exception e) {
 
-            //Õâ¸öÊÇºÜÊµÓÃµÄ£¬Ö±½Ó½«Òì³£µÄĞÅÏ¢×Ô¼ºÈ¡³öÀ´£¬Õâ¸öºÜ¸øÁ¦µÄ¡£
+            //è¿™ä¸ªæ˜¯å¾ˆå®ç”¨çš„ï¼Œç›´æ¥å°†å¼‚å¸¸çš„ä¿¡æ¯è‡ªå·±å–å‡ºæ¥ï¼Œè¿™ä¸ªå¾ˆç»™åŠ›çš„ã€‚
 
             assertThat(Throwables.getStackTraceAsString(e))
                     .contains("Caused by: java.lang.RuntimeException: Innermost exception");

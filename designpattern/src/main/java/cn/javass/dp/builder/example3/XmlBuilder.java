@@ -4,20 +4,20 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * ÊµÏÖµ¼³öÊı¾İµ½XMLÎÄ¼şµÄµÄ¹¹½¨Æ÷¶ÔÏó
+ * å®ç°å¯¼å‡ºæ•°æ®åˆ°XMLæ–‡ä»¶çš„çš„æ„å»ºå™¨å¯¹è±¡
  */
 public class XmlBuilder implements Builder {
 	/**
-	 * ÓÃÀ´¼ÇÂ¼¹¹½¨µÄÎÄ¼şµÄÄÚÈİ£¬Ïàµ±ÓÚ²úÆ·
+	 * ç”¨æ¥è®°å½•æ„å»ºçš„æ–‡ä»¶çš„å†…å®¹ï¼Œç›¸å½“äºäº§å“
 	 */
 	private StringBuffer buffer = new StringBuffer();
 	public void buildBody(
 			Map<String, Collection<ExportDataModel>> mapData) {
 		buffer.append("  <Body>\n");
 		for(String tblName : mapData.keySet()){
-			//ÏÈÆ´½Ó±íÃû³Æ
+			//å…ˆæ‹¼æ¥è¡¨åç§°
 			buffer.append("    <Datas TableName=\""+tblName+"\">\n");
-			//È»ºóÑ­»·Æ´½Ó¾ßÌåÊı¾İ
+			//ç„¶åå¾ªç¯æ‹¼æ¥å…·ä½“æ•°æ®
 			for(ExportDataModel edm : mapData.get(tblName)){
 				buffer.append("      <Data>\n");
 				buffer.append("        <ProductId>"+edm.getProductId()+"</ProductId>\n");
@@ -31,13 +31,13 @@ public class XmlBuilder implements Builder {
 	}
 
 	public void buildFooter(ExportFooterModel efm) {
-		//¶ÔÏóµÄ´´½¨¹ı³Ì
+		//å¯¹è±¡çš„åˆ›å»ºè¿‡ç¨‹
 		
-		//²»ÊÇÓÉ×Ô¼ºÀ´´´½¨¶ÔÏó£¬¶øÊÇÊ¹ÓÃÆäËü×é¼ş´´½¨µÄ¶ÔÏó
-		//±ÈÈç£º¼òµ¥¹¤³§¡¢¹¤³§·½·¨
+		//ä¸æ˜¯ç”±è‡ªå·±æ¥åˆ›å»ºå¯¹è±¡ï¼Œè€Œæ˜¯ä½¿ç”¨å…¶å®ƒç»„ä»¶åˆ›å»ºçš„å¯¹è±¡
+		//æ¯”å¦‚ï¼šç®€å•å·¥å‚ã€å·¥å‚æ–¹æ³•
 		MyFooter mf = FooterFactory.createMyFooter();
 		
-		//×é¼ş×é×°¹ı³Ì
+		//ç»„ä»¶ç»„è£…è¿‡ç¨‹
 		buffer.append(mf.genHeader(efm));
 	}
 

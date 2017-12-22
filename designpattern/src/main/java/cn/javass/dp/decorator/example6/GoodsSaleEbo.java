@@ -5,8 +5,8 @@ public class GoodsSaleEbo implements GoodsSaleEbi{
 	public boolean sale(String user,String customer, SaleModel saleModel) {
 
 
-		//ÕâÀïÔ­ÓĞµÄ·½·¨¡£   ÒÔºóÒªÊÇĞèÒª×°ÊÎÕâ¸ö·½·¨µÄ»°£¬¾ÍÖ±½Ó½«Õâ¸ö·½·¨ÌáÁ¶µ½½Ó¿ÚÖĞÈ¥¾ÍºÃÁË¡£
-		System.out.println(user+"±£´æÁË"+customer+"¹ºÂò "+saleModel+" µÄÏúÊÛÊı¾İ");
+		//è¿™é‡ŒåŸæœ‰çš„æ–¹æ³•ã€‚   ä»¥åè¦æ˜¯éœ€è¦è£…é¥°è¿™ä¸ªæ–¹æ³•çš„è¯ï¼Œå°±ç›´æ¥å°†è¿™ä¸ªæ–¹æ³•æç‚¼åˆ°æ¥å£ä¸­å»å°±å¥½äº†ã€‚
+		System.out.println(user+"ä¿å­˜äº†"+customer+"è´­ä¹° "+saleModel+" çš„é”€å”®æ•°æ®");
 		return true;
 	}
 }

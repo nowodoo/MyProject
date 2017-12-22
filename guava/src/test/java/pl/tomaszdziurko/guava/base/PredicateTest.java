@@ -33,7 +33,7 @@ public class PredicateTest {
             }
         };
 
-        // when   ÏÂÃæÊÇÁ½¸ö²ÎÊı Ò»¸öÊÇÊı×é£¬ÁíÒ»¸öÊÇÅĞ¶ÏÌõ¼ş¡£ÅĞ¶ÏÊı×éÀïÃæµÄÃ¿Ò»¸öÊÇ²»ÊÇ·ûºÏÒ»¶¨µÄÌõ¼ş
+        // when   ä¸‹é¢æ˜¯ä¸¤ä¸ªå‚æ•° ä¸€ä¸ªæ˜¯æ•°ç»„ï¼Œå¦ä¸€ä¸ªæ˜¯åˆ¤æ–­æ¡ä»¶ã€‚åˆ¤æ–­æ•°ç»„é‡Œé¢çš„æ¯ä¸€ä¸ªæ˜¯ä¸æ˜¯ç¬¦åˆä¸€å®šçš„æ¡ä»¶
         boolean allCountriesSpecifyCapitalCity = Iterables.all(
                 Lists.newArrayList(Country.POLAND, Country.BELGIUM, Country.FINLAND_WITHOUT_CAPITAL_CITY),
                     capitalCityProvidedPredicate);
@@ -45,7 +45,7 @@ public class PredicateTest {
     @Test
     public void shouldComposeTwoPredicates() throws Exception {
 
-        //ÆäÊµºÜ¼òµ¥¾ÍÊÇ¸ø¶¨Á½¸öÌõ¼ş£¬È»ºóÓÃÕâÁ½¸öÌõ¼şÈ¥¹ıÂËÕâ¸ö¼¯ºÏ£¬È»ºó½«Êı¾İÈ«²¿È¡³öÀ´¾ÍºÃÁË¡£ºÜ¼òµ¥µÄ¡£
+        //å…¶å®å¾ˆç®€å•å°±æ˜¯ç»™å®šä¸¤ä¸ªæ¡ä»¶ï¼Œç„¶åç”¨è¿™ä¸¤ä¸ªæ¡ä»¶å»è¿‡æ»¤è¿™ä¸ªé›†åˆï¼Œç„¶åå°†æ•°æ®å…¨éƒ¨å–å‡ºæ¥å°±å¥½äº†ã€‚å¾ˆç®€å•çš„ã€‚
         // given
         Predicate<Country> fromEuropePredicate = new Predicate<Country>() {
 
@@ -75,7 +75,7 @@ public class PredicateTest {
     @Test
     public void shouldCheckPattern() throws Exception {
 
-        //ÕıÔò±í´ïÊ½µÄÊ¹ÓÃ£¬ÓÃÒ»¸öÕıÔòµÄ¹¤¾ßÀàÈ¥ÅĞ¶ÏÒ»¸ö×Ö·û´®ÊÇ²»ÊÇ·ûºÏÕâ¸ö×Ö·û´®¡£
+        //æ­£åˆ™è¡¨è¾¾å¼çš„ä½¿ç”¨ï¼Œç”¨ä¸€ä¸ªæ­£åˆ™çš„å·¥å…·ç±»å»åˆ¤æ–­ä¸€ä¸ªå­—ç¬¦ä¸²æ˜¯ä¸æ˜¯ç¬¦åˆè¿™ä¸ªå­—ç¬¦ä¸²ã€‚
 
         // given
         Predicate<CharSequence> twoDigitsPredicate = Predicates.containsPattern("\\d\\d");
@@ -87,7 +87,7 @@ public class PredicateTest {
     @Test
     public void shouldFindObjectInCollection() throws Exception {
 
-        //ÅĞ¶ÏÒ»¸öÖµÊÇ²»ÊÇÔÚÒ»¸ö¼¯ºÏÖĞ¡£ÅĞ¶ÏÌõ¼şºÜ¼òµ¥¡£
+        //åˆ¤æ–­ä¸€ä¸ªå€¼æ˜¯ä¸æ˜¯åœ¨ä¸€ä¸ªé›†åˆä¸­ã€‚åˆ¤æ–­æ¡ä»¶å¾ˆç®€å•ã€‚
 
         // given
         Predicate elevenInCollectionPredicate = Predicates.in(Arrays.asList(11L, 22L, 33L, 44L));

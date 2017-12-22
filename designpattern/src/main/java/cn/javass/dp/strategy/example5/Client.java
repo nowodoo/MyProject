@@ -2,39 +2,39 @@ package cn.javass.dp.strategy.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨ÏàÓ¦µÄÖ§¸¶²ßÂÔ
+		//åˆ›å»ºç›¸åº”çš„æ”¯ä»˜ç­–ç•¥
 		PaymentStrategy strategyRMB = new RMBCash();
 		PaymentStrategy strategyDollar = new DollarCash();
 
 
-		//ÏÂÃæÖ»ÊÇ´«Èë²ßÂÔ£¬µ«ÊÇ²¢Ã»ÓĞÅĞ¶ÏÊ¹ÓÃÄÄ¸ö²ßÂÔ¡£
+		//ä¸‹é¢åªæ˜¯ä¼ å…¥ç­–ç•¥ï¼Œä½†æ˜¯å¹¶æ²¡æœ‰åˆ¤æ–­ä½¿ç”¨å“ªä¸ªç­–ç•¥ã€‚
 
 
-		//×¼±¸Ğ¡ÀîµÄÖ§¸¶¹¤×ÊÉÏÏÂÎÄ
-		PaymentContext ctx1 = new PaymentContext("Ğ¡Àî",5000,strategyRMB);
-		//ÏòĞ¡ÀîÖ§¸¶¹¤×Ê
+		//å‡†å¤‡å°æçš„æ”¯ä»˜å·¥èµ„ä¸Šä¸‹æ–‡
+		PaymentContext ctx1 = new PaymentContext("å°æ",5000,strategyRMB);
+		//å‘å°ææ”¯ä»˜å·¥èµ„
 		ctx1.payNow();
 		
-		//ÇĞ»»Ò»¸öÈË£¬¸øpetterÖ§¸¶¹¤×Ê
+		//åˆ‡æ¢ä¸€ä¸ªäººï¼Œç»™petteræ”¯ä»˜å·¥èµ„
 		PaymentContext ctx2 = new PaymentContext("Petter",8000,strategyDollar);
 		ctx2.payNow();
 
 
 
 
-		//ºóÃæÁ½ÖÖÊÇ²»Í¬µÄÀ©Õ¹ĞÎÊ½£¬Ò»ÖÖÊÇÀ©Õ¹ÉÏÏÂÎÄ£¬ÁíÒ»ÖÖÊÇÀ©Õ¹²ßÂÔ¡£
+		//åé¢ä¸¤ç§æ˜¯ä¸åŒçš„æ‰©å±•å½¢å¼ï¼Œä¸€ç§æ˜¯æ‰©å±•ä¸Šä¸‹æ–‡ï¼Œå¦ä¸€ç§æ˜¯æ‰©å±•ç­–ç•¥ã€‚
 
 
 
 
-		//²âÊÔĞÂÌí¼ÓµÄÖ§¸¶·½Ê½
+		//æµ‹è¯•æ–°æ·»åŠ çš„æ”¯ä»˜æ–¹å¼
 		PaymentStrategy strategyCard = new Card();
-		PaymentContext ctx3 = new PaymentContext2("Ğ¡Íõ",9000,"010998877656",strategyCard);   //ÕâÀïÈÃÉÏÏÂÎÄ¶ÔÏó¶àÁËÒ»¸ö²ÎÊı¡£
+		PaymentContext ctx3 = new PaymentContext2("å°ç‹",9000,"010998877656",strategyCard);   //è¿™é‡Œè®©ä¸Šä¸‹æ–‡å¯¹è±¡å¤šäº†ä¸€ä¸ªå‚æ•°ã€‚
 		ctx3.payNow();
 
-		//²âÊÔĞÂÌí¼ÓµÄÖ§¸¶·½Ê½
-		PaymentStrategy strategyCard2 = new Card2("010998877656");    //ÔÚÕâÀï£¬²ßÂÔ¶àÁËÒ»¸ö²ÎÊı¡£   ÕâÖÖÀ©Õ¹·½Ê½£¬Ê¹µÃÒ»²¿·ÖµÄÊı¾İÀ´Ô´ÓÚÉÏÏÂÎÄ£¬ÁíÒ»²¿·ÖÊı¾İÀ´Ô´ÓÚ²ßÂÔ×Ô¼ºµÄÀ©Õ¹¡£
-		PaymentContext ctx4 = new PaymentContext("Ğ¡ÕÅ",9000,strategyCard2);
+		//æµ‹è¯•æ–°æ·»åŠ çš„æ”¯ä»˜æ–¹å¼
+		PaymentStrategy strategyCard2 = new Card2("010998877656");    //åœ¨è¿™é‡Œï¼Œç­–ç•¥å¤šäº†ä¸€ä¸ªå‚æ•°ã€‚   è¿™ç§æ‰©å±•æ–¹å¼ï¼Œä½¿å¾—ä¸€éƒ¨åˆ†çš„æ•°æ®æ¥æºäºä¸Šä¸‹æ–‡ï¼Œå¦ä¸€éƒ¨åˆ†æ•°æ®æ¥æºäºç­–ç•¥è‡ªå·±çš„æ‰©å±•ã€‚
+		PaymentContext ctx4 = new PaymentContext("å°å¼ ",9000,strategyCard2);
 		ctx4.payNow();
 	}
 }

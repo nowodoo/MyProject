@@ -23,7 +23,7 @@ public class PreconditionsLesson {
 
     public void displayFootballTeamMembers(List<String> teamMembers) {
 
-        //ºóÃæ¶¼ÊÇÌáÊ¾µÄÄ¬ÈÏÖµ
+        //åé¢éƒ½æ˜¯æç¤ºçš„é»˜è®¤å€¼
         Preconditions.checkNotNull(teamMembers, "Team can not be null");
         Preconditions.checkArgument(teamMembers.size() == 11, "Full team should consist of 11 players");
     }

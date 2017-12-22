@@ -17,7 +17,7 @@ public class ForwardingListTest {
     @Test
     public void shouldAddOppositeNumber() throws Exception {
 
-        //¾ÍÊÇÔÚÌí¼ÓÒ»¸ö¼¯ºÏÖ®Ç°½øÐÐÒ»ÏµÁÐµÄ²Ù×÷£¬¿ÉÒÔÔÚÌí¼Ó¼¯ºÏÖ®Ç°×öÒ»Ð©ÆäËûµÄ¸½Êô¶¯×÷£¬±ÈÈçÌìÌí¼ÓÒ»¸öÊý×Ö¿ÉÒÔÖ±½Ó×îºó±äÎªÌí¼ÓÁ½¸öÊý×Ö£¬ÕâÑùÊÇºÜ·½±ãµÄ¡£
+        //å°±æ˜¯åœ¨æ·»åŠ ä¸€ä¸ªé›†åˆä¹‹å‰è¿›è¡Œä¸€ç³»åˆ—çš„æ“ä½œï¼Œå¯ä»¥åœ¨æ·»åŠ é›†åˆä¹‹å‰åšä¸€äº›å…¶ä»–çš„é™„å±žåŠ¨ä½œï¼Œæ¯”å¦‚å¤©æ·»åŠ ä¸€ä¸ªæ•°å­—å¯ä»¥ç›´æŽ¥æœ€åŽå˜ä¸ºæ·»åŠ ä¸¤ä¸ªæ•°å­—ï¼Œè¿™æ ·æ˜¯å¾ˆæ–¹ä¾¿çš„ã€‚
 
         // given
         Collection<Integer> numbersList = new ForwardingCollection<Integer>() {

@@ -15,7 +15,7 @@ public class DiscreteDomainTest {
     @Test
     public void shouldReturnNextInt() throws Exception {
 
-        //Ö»ÊÇÓÃÊı×Ö±íÊ¾ÁËÔÚÒ»¸öÊı×Ö·¶Î§Ö®ÄÚ½«Êı×ÖÈ¡³öµÄ×ö·¨¡£
+        //åªæ˜¯ç”¨æ•°å­—è¡¨ç¤ºäº†åœ¨ä¸€ä¸ªæ•°å­—èŒƒå›´ä¹‹å†…å°†æ•°å­—å–å‡ºçš„åšæ³•ã€‚
 
         // given
         DiscreteDomain<Integer> integers = DiscreteDomains.integers();

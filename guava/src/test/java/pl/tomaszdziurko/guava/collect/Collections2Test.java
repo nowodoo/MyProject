@@ -24,7 +24,7 @@ public class Collections2Test {
     @Test
     public void shouldTransformCollection() throws Exception {
 
-        //ÕâÀïÊÇ½«Ò»¸ö¼¯ºÏ¼¯ºÏ½øĞĞ×ª»»£¬·µ»ØÁíÒ»¸öĞÎÊ½µÄ¼¯ºÏ°ÕÁË¡£
+        //è¿™é‡Œæ˜¯å°†ä¸€ä¸ªé›†åˆé›†åˆè¿›è¡Œè½¬æ¢ï¼Œè¿”å›å¦ä¸€ä¸ªå½¢å¼çš„é›†åˆç½¢äº†ã€‚
 
         // given
         ArrayList<Country> countries = Lists.newArrayList(Country.POLAND, Country.BELGIUM, Country.ENGLAND);
@@ -46,7 +46,7 @@ public class Collections2Test {
     @Test
     public void shouldFilterCountriesOnlyFromAfrica() throws Exception {
 
-        //ÕâÀïÊÇ½«Ò»¸ö¼¯ºÏ½øĞĞ¹ıÂË£¬°´ÕÕÌõ¼ş»ñÈ¡ĞèÒªµÄÊı¾İ¡£´ÓÁíÒ»¸ö·½Ãæ¿´£¬¾ÍÊÇ½«Ò»¸ö¼¯ºÏ×ª»¯ÎªÁíÒ»¸ö¼¯ºÏ¡£
+        //è¿™é‡Œæ˜¯å°†ä¸€ä¸ªé›†åˆè¿›è¡Œè¿‡æ»¤ï¼ŒæŒ‰ç…§æ¡ä»¶è·å–éœ€è¦çš„æ•°æ®ã€‚ä»å¦ä¸€ä¸ªæ–¹é¢çœ‹ï¼Œå°±æ˜¯å°†ä¸€ä¸ªé›†åˆè½¬åŒ–ä¸ºå¦ä¸€ä¸ªé›†åˆã€‚
 
         // given
         ArrayList<Country> countries = Lists.newArrayList(Country.POLAND, Country.BELGIUM, Country.SOUTH_AFRICA);
@@ -67,7 +67,7 @@ public class Collections2Test {
     @Test
     public void shouldShowThatResultIsOnlyAView() throws Exception {
 
-        //ÆäÊµ¾ÍÊÇÊµÏÖÁË¹ıÂËºÍÖØ¶¨ÏòµÄ¹¦ÄÜ£¬½«Ò»¸ö¼¯ºÏÖØ¶¨ÏòÎªÁíÒ»¸ö¼¯ºÏ£¬µ±¹ıÂËÌõ¼ş·Ç³£¸´ÔÓµÄÊ±ºò£¬ÄÇÃ´Õâ¸öÊ±ºò£¬ËûµÄÓÅÊÆ¾ÍºÜÍ»³öÁË¡£
+        //å…¶å®å°±æ˜¯å®ç°äº†è¿‡æ»¤å’Œé‡å®šå‘çš„åŠŸèƒ½ï¼Œå°†ä¸€ä¸ªé›†åˆé‡å®šå‘ä¸ºå¦ä¸€ä¸ªé›†åˆï¼Œå½“è¿‡æ»¤æ¡ä»¶éå¸¸å¤æ‚çš„æ—¶å€™ï¼Œé‚£ä¹ˆè¿™ä¸ªæ—¶å€™ï¼Œä»–çš„ä¼˜åŠ¿å°±å¾ˆçªå‡ºäº†ã€‚
 
         // given
         ArrayList<Country> countries = Lists.newArrayList(Country.POLAND, Country.BELGIUM, Country.ENGLAND);
@@ -105,11 +105,11 @@ public class Collections2Test {
         }
 
 
-        //º¯ÊıÊ½ÊµÏÖÌí¼ÓÒ»¸ökey
-        //×¢ÒâÃ¿¸öµØ·½¶¼ÊÇÁ½¸ö²ÎÊı
+        //å‡½æ•°å¼å®ç°æ·»åŠ ä¸€ä¸ªkey
+        //æ³¨æ„æ¯ä¸ªåœ°æ–¹éƒ½æ˜¯ä¸¤ä¸ªå‚æ•°
         Multimap<Map<String, Object>, Map<String, Object>> cityHotelMap = Multimaps.index(hotelList, new Function< Map<String, Object>, Map<String, Object> >() {
 
-            //ÕâÀïµÄÈë²ÎºÍ³ö²Î¶¼ÊÇ¶ÔÓ¦×ÅÁ½¸öÖµ£¬Ò»¸öÊÇÔ­Éú£¬ÁíÒ»¸ö¾ÍÊÇ¾­¹ı±ä»¯µÄ
+            //è¿™é‡Œçš„å…¥å‚å’Œå‡ºå‚éƒ½æ˜¯å¯¹åº”ç€ä¸¤ä¸ªå€¼ï¼Œä¸€ä¸ªæ˜¯åŸç”Ÿï¼Œå¦ä¸€ä¸ªå°±æ˜¯ç»è¿‡å˜åŒ–çš„
             public Map<String, Object> apply(Map<String, Object> input) {
                 input.put("addedKey", "6");
                 return input;
@@ -117,13 +117,13 @@ public class Collections2Test {
         });
 
 
-        //½«ËùÓĞµÄ½á¹ûÊä³ö
+        //å°†æ‰€æœ‰çš„ç»“æœè¾“å‡º
         System.out.println(hotelList);
         System.out.println(cityHotelMap);
 
 
 
-        //ÏÂÃæ²ÅÊÇÔ´Âë£¬½«hotel×ª»»ÎªStringµÄÑùÊ½
+        //ä¸‹é¢æ‰æ˜¯æºç ï¼Œå°†hotelè½¬æ¢ä¸ºStringçš„æ ·å¼
 //        List<Hotel> hotelList = new ArrayList<>();
 //
 //        MultiMap<String,Hotel> cityHotelMap = MultiMaps.index(hotelList,new Function(){

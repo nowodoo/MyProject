@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ·ÇÖÕ½á·û±í´ïÊ½===Ïàµ±ÓÚ×éºÏ¶ÔÏó
+ * éç»ˆç»“ç¬¦è¡¨è¾¾å¼===ç›¸å½“äºç»„åˆå¯¹è±¡
  */
 public class NonterminalExpression extends AbstractExpression{
 	private List<AbstractExpression> list = new ArrayList<AbstractExpression>();
@@ -14,6 +14,6 @@ public class NonterminalExpression extends AbstractExpression{
 	}
 	
 	public void interpret(Context ctx) {
-		//ÊµÏÖÓëÓï·¨¹æÔòÖĞµÄ·ÇÖÕ½á·ûÏà¹ØÁªµÄ½âÊÍ²Ù×÷
+		//å®ç°ä¸è¯­æ³•è§„åˆ™ä¸­çš„éç»ˆç»“ç¬¦ç›¸å…³è”çš„è§£é‡Šæ“ä½œ
 	}
 }

@@ -43,7 +43,7 @@ public class FunctionsTest {
 
     @Test
     public void shouldComposeTwoFunctions() throws Exception {
-        //±íÊ¾¾­¹ıÁ½¸öº¯ÊıµÄ±ä»»£¬Ò»¸öÊÇ½á¹¹µÄ±ä»»£¬ÁíÒ»¸öÊÇÄÚÈİµÄ±ä»»¡£
+        //è¡¨ç¤ºç»è¿‡ä¸¤ä¸ªå‡½æ•°çš„å˜æ¢ï¼Œä¸€ä¸ªæ˜¯ç»“æ„çš„å˜æ¢ï¼Œå¦ä¸€ä¸ªæ˜¯å†…å®¹çš„å˜æ¢ã€‚
 
         Function<Country, String> upperCaseFunction = new Function<Country, String>() {
             public String apply(@Nullable Country country) {
@@ -73,7 +73,7 @@ public class FunctionsTest {
 
     @Test
     public void shouldUseForMapFunction() throws Exception {
-        //¾ÍÊÇ¸ù¾İÒ»¶Ñ¼ü£¬»ñÈ¡Ò»¶ÑÖµ
+        //å°±æ˜¯æ ¹æ®ä¸€å †é”®ï¼Œè·å–ä¸€å †å€¼
 
         // given
         Map<String, String> map = Maps.newHashMap();
@@ -98,7 +98,7 @@ public class FunctionsTest {
     @Test(expectedExceptions = IllegalArgumentException.class, expectedExceptionsMessageRegExp = "Key 'Belgium' not present in map")
     public void shouldUseForMapFunctionWithNonExistingKey() throws Exception {
 
-        //¾ÍÊÇÎªÁËÅ×³öÒì³££¬ÒªÊÇÔÚÒ»¸öÃ»ÓĞÏà¹ØkeyµÄ¼¯ºÏÀïÃæ»ñÈ¡ÏëÒªµÄÊıÖµÊÇ²»¿ÉÒÔµÄ¡£
+        //å°±æ˜¯ä¸ºäº†æŠ›å‡ºå¼‚å¸¸ï¼Œè¦æ˜¯åœ¨ä¸€ä¸ªæ²¡æœ‰ç›¸å…³keyçš„é›†åˆé‡Œé¢è·å–æƒ³è¦çš„æ•°å€¼æ˜¯ä¸å¯ä»¥çš„ã€‚
 
         // given
         Map<String, String> map = Maps.newHashMap();
@@ -125,7 +125,7 @@ public class FunctionsTest {
     @Test
     public void shouldUseForMapFunctionWithDefaultValue() throws Exception {
 
-        //±íÊ¾¶ÔÃ»ÓĞµÄÖµ¿ÉÒÔ×öÒ»¸öÄ¬ÈÏÖµ£¬¾ÍÊÇÕâ¸öÎÄkeyÃ»ÓĞÖµÁË¾ÍÉèÖÃÒ»¸öÄ¬ÈÏÖµ¡£
+        //è¡¨ç¤ºå¯¹æ²¡æœ‰çš„å€¼å¯ä»¥åšä¸€ä¸ªé»˜è®¤å€¼ï¼Œå°±æ˜¯è¿™ä¸ªæ–‡keyæ²¡æœ‰å€¼äº†å°±è®¾ç½®ä¸€ä¸ªé»˜è®¤å€¼ã€‚
 
         // given
         Map<String, String> map = Maps.newHashMap();

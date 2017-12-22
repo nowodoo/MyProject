@@ -6,7 +6,7 @@ public class MyFactory {
 	}
 	public static ExportFileApi factoryMethod(int type){
 		ExportFileApi api = null;
-		//¸ù¾İÀàĞÍÀ´Ñ¡Ôñ¾¿¾¹Òª´´½¨ÄÄÒ»ÖÖµ¼³öÎÄ¼ş¶ÔÏó
+		//æ ¹æ®ç±»å‹æ¥é€‰æ‹©ç©¶ç«Ÿè¦åˆ›å»ºå“ªä¸€ç§å¯¼å‡ºæ–‡ä»¶å¯¹è±¡
 		if(type==1){
 			api = new ExportTxtFile();
 		}else if(type==2){

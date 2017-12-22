@@ -4,14 +4,14 @@ import java.io.*;
 
 public class Client {
 	public static void main(String[] args) throws Exception {
-		//流式输出文件
+		//娴佸紡杈撳嚭鏂囦欢
 		DataOutputStream dout = 
 		new DataOutputStream(
 				new EncryptOutputStream2(
 				new BufferedOutputStream(
 						
 					new FileOutputStream("MyEncrypt.txt"))));
-		//然后就可以输出内容了
+		//鐒跺悗灏卞彲浠ヨ緭鍑哄唴瀹逛簡
 		dout.write("abcdxy".getBytes());
 		dout.close();
 	}

@@ -1,8 +1,8 @@
 package cn.javass.dp.interpreter.example2;
 /**
- * ÉÏÏÂÎÄ£¬°üº¬½âÊÍÆ÷Ö®ÍâµÄÒ»Ð©È«¾ÖÐÅÏ¢
+ * ä¸Šä¸‹æ–‡ï¼ŒåŒ…å«è§£é‡Šå™¨ä¹‹å¤–çš„ä¸€äº›å…¨å±€ä¿¡æ¯
  */
 public class Context {
-	//¶à¸ö½âÊÍÆ÷  ¹«¹²µÄÊôÐÔ
-	//¶à¸ö½âÊÍÆ÷  ¹«¹²µÄ·½·¨
+	//å¤šä¸ªè§£é‡Šå™¨  å…¬å…±çš„å±žæ€§
+	//å¤šä¸ªè§£é‡Šå™¨  å…¬å…±çš„æ–¹æ³•
 }

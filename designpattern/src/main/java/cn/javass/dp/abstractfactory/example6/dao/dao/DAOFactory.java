@@ -4,17 +4,17 @@ import cn.javass.dp.abstractfactory.example6.dao.impl.OrderDetailDAO;
 import cn.javass.dp.abstractfactory.example6.dao.impl.OrderMainDAO;
 
 /**
- * 抽象工厂，创建订单主、子记录对应的DAO对象
+ * 鎶借薄宸ュ巶锛屽垱寤鸿鍗曚富銆佸瓙璁板綍瀵瑰簲鐨凞AO瀵硅薄
  */
 public interface DAOFactory {
 	/**
-	 * 创建订单主记录对应的DAO对象
-	 * @return 订单主记录对应的DAO对象
+	 * 鍒涘缓璁㈠崟涓昏褰曞搴旂殑DAO瀵硅薄
+	 * @return 璁㈠崟涓昏褰曞搴旂殑DAO瀵硅薄
 	 */
 	public  OrderMainDAO createOrderMainDAO();
 	/**
-	 * 创建订单子记录对应的DAO对象
-	 * @return 订单子记录对应的DAO对象
+	 * 鍒涘缓璁㈠崟瀛愯褰曞搴旂殑DAO瀵硅薄
+	 * @return 璁㈠崟瀛愯褰曞搴旂殑DAO瀵硅薄
 	 */
 	public  OrderDetailDAO createOrderDetailDAO();
 }

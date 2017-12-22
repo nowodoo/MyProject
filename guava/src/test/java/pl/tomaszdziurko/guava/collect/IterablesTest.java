@@ -21,7 +21,7 @@ public class IterablesTest {
     @Test
     public void shouldCheckLengthOfAllElements() throws Exception {
 
-        //±éÀú¼¯ºÏÖĞµÄÃ¿Ò»¸öÔªËØ£¬¿´Ò»ÏÂÊÇ²»ÊÇ·ûºÏÄ³Ò»¸ö»òÕßÊÇÄ³Ò»Ğ©Ìõ¼ş¡£ÆäÊµÕâĞ©ÓÃÔÚ¾Ö²¿Âß¼­´¦ÀíÉÏÃæÊÇºÜ·½±ãµÄ¡£¿ÉÒÔÄÃÀ´Ö±½ÓÓÃµÄ¡£
+        //éå†é›†åˆä¸­çš„æ¯ä¸€ä¸ªå…ƒç´ ï¼Œçœ‹ä¸€ä¸‹æ˜¯ä¸æ˜¯ç¬¦åˆæŸä¸€ä¸ªæˆ–è€…æ˜¯æŸä¸€äº›æ¡ä»¶ã€‚å…¶å®è¿™äº›ç”¨åœ¨å±€éƒ¨é€»è¾‘å¤„ç†ä¸Šé¢æ˜¯å¾ˆæ–¹ä¾¿çš„ã€‚å¯ä»¥æ‹¿æ¥ç›´æ¥ç”¨çš„ã€‚
 
         // given
         Predicate<String> lengthPredicate = new Predicate<String> () {
@@ -42,7 +42,7 @@ public class IterablesTest {
     @Test
     public void shouldCheckIfAtLeastOneElementIsEmptyOrNull() throws Exception {
 
-        //ÕâÀïÖ»ÊÇÓÃÀ´ÅĞ¶ÏÊÇ²»ÊÇ·ûºÏÒ»¸öÔªËØ¡£
+        //è¿™é‡Œåªæ˜¯ç”¨æ¥åˆ¤æ–­æ˜¯ä¸æ˜¯ç¬¦åˆä¸€ä¸ªå…ƒç´ ã€‚
 
         // given
         Predicate<String> emptyOrNullPredicate = new Predicate<String> () {
@@ -134,7 +134,7 @@ public class IterablesTest {
     @Test
     public void shouldCountElementsInIterable() throws Exception {
 
-        //±éÀúÒ»¸ö¼¯ºÏÖĞÄ³Ò»¸öÔªËØ³öÏÖµÄË³Ğò
+        //éå†ä¸€ä¸ªé›†åˆä¸­æŸä¸€ä¸ªå…ƒç´ å‡ºç°çš„é¡ºåº
 
         // given
         List<Integer> numbersList = Lists.newArrayList(1, 2, 3, 0, -2, 2, 430, 2);
@@ -149,7 +149,7 @@ public class IterablesTest {
     @Test
     public void shouldReturnSelectedElementWithDefValue() throws Exception {
 
-        //»ñÈ¡Ò»¸ö¼¯ºÏµÄÊıÖµ£¬µ±Õâ¸öÊıÖµ²»´æÔÚµÄÊ±ºò¾ÍÉèÖÃÒ»¸öÄ¬ÈÏÖµ¡£
+        //è·å–ä¸€ä¸ªé›†åˆçš„æ•°å€¼ï¼Œå½“è¿™ä¸ªæ•°å€¼ä¸å­˜åœ¨çš„æ—¶å€™å°±è®¾ç½®ä¸€ä¸ªé»˜è®¤å€¼ã€‚
 
         // given
         List<Integer> numbersList = Lists.newArrayList(1, 2, 3, 0, -12, 22, 430, -1024);
@@ -164,7 +164,7 @@ public class IterablesTest {
     @Test
     public void shouldGetFirstAndLast() throws Exception {
 
-        //»ñÈ¡µÚÒ»¸öºÍ×îºóÒ»¸öÊıÖµ£¬ÒªÊÇÃ»ÓĞµÄ»°¾ÍÉèÖÃÒ»¸öÄ¬ÈÏÖµ
+        //è·å–ç¬¬ä¸€ä¸ªå’Œæœ€åä¸€ä¸ªæ•°å€¼ï¼Œè¦æ˜¯æ²¡æœ‰çš„è¯å°±è®¾ç½®ä¸€ä¸ªé»˜è®¤å€¼
 
         // given
         List<Integer> numbersList = Lists.newArrayList(1, 2, 3, 0, -12, 22, 430, -1024);
@@ -181,7 +181,7 @@ public class IterablesTest {
     @Test
     public void shouldPartition() throws Exception {
 
-        //½«Ò»¸öÊı×é°´ÕÕ¹Ì¶¨µÄ³¤¶È½øĞĞ·Ö¸î£¬·Ö¸îÎª¶à¸öÊı×é
+        //å°†ä¸€ä¸ªæ•°ç»„æŒ‰ç…§å›ºå®šçš„é•¿åº¦è¿›è¡Œåˆ†å‰²ï¼Œåˆ†å‰²ä¸ºå¤šä¸ªæ•°ç»„
 
         // given
         List<Integer> numbersList = Lists.newArrayList(1, 2, 3, 0, -12, 22, 430, -1024);
@@ -200,7 +200,7 @@ public class IterablesTest {
     @Test
     public void shouldConvertToArray() throws Exception {
 
-        //½«Ò»¸ö°üº¬Êı×ÖµÄ¼¯ºÏÔªËØ×ª»»Îª°üº¬Êı×ÖµÄÊı×é¡£
+        //å°†ä¸€ä¸ªåŒ…å«æ•°å­—çš„é›†åˆå…ƒç´ è½¬æ¢ä¸ºåŒ…å«æ•°å­—çš„æ•°ç»„ã€‚
 
         // given
         List<Integer> numbersList = Lists.newArrayList(1, 2, 3, 0, -12, 22, 430, -1024);
@@ -217,7 +217,7 @@ public class IterablesTest {
     @Test
     public void shouldRemoveNegativeNumbers() throws Exception {
 
-        //½«¼¯ºÏÖĞµÄÔªËØ°´ÕÕ¹æÔò½øĞĞÒÆ³ı¡£
+        //å°†é›†åˆä¸­çš„å…ƒç´ æŒ‰ç…§è§„åˆ™è¿›è¡Œç§»é™¤ã€‚
 
         // given
         List<Integer> numbersList = Lists.newArrayList(1, 2, 3, 0, -12, 22, 430, -1024);

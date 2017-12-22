@@ -18,7 +18,7 @@ public class ConstraintsTest {
     @Test(expectedExceptions = NullPointerException.class)
     public void shouldThrowExceptionOnNullAdd() throws Exception {
 
-        //¾ÍÊÇ¶ÔÒ»¸ö¼¯ºÏÌí¼ÓÒ»Ğ©ÏŞÖÆ£¬µ±ÄãÍùÕâ¸ö¼¯ºÏÖĞÌí¼ÓÒ»Ğ©Êı¾İµÄÊ±ºò£¬ÒªÊÇÕâ¸öÊı¾İ²»·ûºÏÕâĞ©Ô¼ÊøµÄÊ±ºò£¬¾Í»áÅ×³öÒì³£¡£
+        //å°±æ˜¯å¯¹ä¸€ä¸ªé›†åˆæ·»åŠ ä¸€äº›é™åˆ¶ï¼Œå½“ä½ å¾€è¿™ä¸ªé›†åˆä¸­æ·»åŠ ä¸€äº›æ•°æ®çš„æ—¶å€™ï¼Œè¦æ˜¯è¿™ä¸ªæ•°æ®ä¸ç¬¦åˆè¿™äº›çº¦æŸçš„æ—¶å€™ï¼Œå°±ä¼šæŠ›å‡ºå¼‚å¸¸ã€‚
 
         // given
         List<Integer> numbers = Constraints
@@ -35,7 +35,7 @@ public class ConstraintsTest {
     public void shouldThrowExceptionOnInvalidAdd() throws Exception {
 
 
-        //½«ÏŞÖÆ¸´ÔÓ»¯£¬ÒªÊÇÒµÎñÒªÇóµÄÊı¾İºÜ¸´ÔÓµÄÊ±ºò£¬Õâ¸ö¹¦ÄÜ¾ÍÒªÅÉÉÏÓÃ³¡¡£
+        //å°†é™åˆ¶å¤æ‚åŒ–ï¼Œè¦æ˜¯ä¸šåŠ¡è¦æ±‚çš„æ•°æ®å¾ˆå¤æ‚çš„æ—¶å€™ï¼Œè¿™ä¸ªåŠŸèƒ½å°±è¦æ´¾ä¸Šç”¨åœºã€‚
 
 
         // given

@@ -2,21 +2,21 @@ package cn.javass.dp.builder.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨¹¹½¨Æ÷
+		//åˆ›å»ºæ„å»ºå™¨
 		ConcreteBuilder builder = new ConcreteBuilder("001",12345L,67890L);
-		//ÉèÖÃĞèÒªµÄÊı¾İ£¬È»ºó¹¹½¨±£ÏÕºÏÍ¬¶ÔÏó
+		//è®¾ç½®éœ€è¦çš„æ•°æ®ï¼Œç„¶åæ„å»ºä¿é™©åˆåŒå¯¹è±¡
 		InsuranceContract contract = 
-				builder.setPersonName("ÕÅÈı")
+				builder.setPersonName("å¼ ä¸‰")
 				.setOtherData("test")
 				.build();
 		
-		//²Ù×÷±£ÏÕºÏÍ¬¶ÔÏóµÄ·½·¨
+		//æ“ä½œä¿é™©åˆåŒå¯¹è±¡çš„æ–¹æ³•
 		contract.someOperation();
 		
 		ConcreteBuilder builder2 = new ConcreteBuilder("001",12345L,67890L);
 		InsuranceContract contract2 = 
 				builder2
-					.setPersonName("ÀîËÄ")
+					.setPersonName("æå››")
 					.setCompanyName("cc")
 					.setOtherData("company")
 					.build();

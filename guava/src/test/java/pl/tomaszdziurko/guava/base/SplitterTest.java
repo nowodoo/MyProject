@@ -45,7 +45,7 @@ public class SplitterTest {
 
     @Test
     public void shouldSplitOnRegExp() throws Exception {
-        //ÓÃÕıÔò±í´ïÊ½È¥·Ö¸îÒ»¸ö×Ö·û´®¡£
+        //ç”¨æ­£åˆ™è¡¨è¾¾å¼å»åˆ†å‰²ä¸€ä¸ªå­—ç¬¦ä¸²ã€‚
 
         // when
         Iterable<String> iterable = Splitter.onPattern("\\d+").split("Java3Scala4Haskell0Brainfuck5Kotlin");
@@ -61,7 +61,7 @@ public class SplitterTest {
     @Test
     public void shouldSplitUsingCharMatcher() throws Exception {
 
-        //Õâ¸öÊÇÓÃÒ»¸ö·¶Î§È¥·Ö¸îÒ»¸ö×Ö·û´®¡£ 3 4 5ÕâÑùµÄÒ²ËãÊÇÒ»¸ö·¶Î§
+        //è¿™ä¸ªæ˜¯ç”¨ä¸€ä¸ªèŒƒå›´å»åˆ†å‰²ä¸€ä¸ªå­—ç¬¦ä¸²ã€‚ 3 4 5è¿™æ ·çš„ä¹Ÿç®—æ˜¯ä¸€ä¸ªèŒƒå›´
 
         // when
         Iterable<String> iterable = Splitter
@@ -77,7 +77,7 @@ public class SplitterTest {
     @Test
     public void shouldSplitAndOmitEmptyElementsAndWhitespaces() throws Exception {
 
-        //ºöÂÔ¿ÕµÄ×Ö·û´®½øĞĞ·Ö¸î
+        //å¿½ç•¥ç©ºçš„å­—ç¬¦ä¸²è¿›è¡Œåˆ†å‰²
 
         // when
         Iterable<String> iterable = Splitter.on(";").omitEmptyStrings()
@@ -93,7 +93,7 @@ public class SplitterTest {
     @Test
     public void shouldSplitForEqualLength() throws Exception {
 
-        //Õâ¸öÊÇ°´ÕÕ³¤¶È½ø½øĞĞ·Ö¸î¡£Ã¿¸ô×ÅÒ»¶¨µÄ³¤¶È½«×Ö·û´®·Ö¿ª¡£
+        //è¿™ä¸ªæ˜¯æŒ‰ç…§é•¿åº¦è¿›è¿›è¡Œåˆ†å‰²ã€‚æ¯éš”ç€ä¸€å®šçš„é•¿åº¦å°†å­—ç¬¦ä¸²åˆ†å¼€ã€‚
 
      // when
         Iterable<String> iterable = Splitter.fixedLength(5).split("HorseHouseGroupDemosScrum");

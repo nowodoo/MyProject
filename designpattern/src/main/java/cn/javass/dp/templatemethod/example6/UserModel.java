@@ -1,11 +1,11 @@
 package cn.javass.dp.templatemethod.example6;
 /**
- * 描述用户的数据模型，VO
+ * 鎻忚堪鐢ㄦ埛鐨勬暟鎹ā鍨嬶紝VO
  */
 public class UserModel {
-	private String uuid; //绝对匹配
-	private String name; //模糊匹配
-	private int age; //区间匹配
+	private String uuid; //缁濆鍖归厤
+	private String name; //妯＄硦鍖归厤
+	private int age; //鍖洪棿鍖归厤
 	public String getUuid() {
 		return uuid;
 	}

@@ -1,17 +1,17 @@
 package cn.javass.dp.visitor.example3;
 /**
- * ¾ßÌåµÄ·ÃÎÊÕßÊµÏÖ
+ * å…·ä½“çš„è®¿é—®è€…å®ç°
  */
 public class ConcreteVisitor1 implements Visitor {
 	public void visitConcreteElementA(ConcreteElementA element) {
-		//°ÑÈ¥·ÃÎÊConcreteElementAÊ±£¬ĞèÒªÖ´ĞĞµÄ¹¦ÄÜÊµÏÖÔÚÕâÀï
-		//¿ÉÄÜĞèÒª·ÃÎÊÔªËØÒÑÓĞµÄ¹¦ÄÜ£¬±ÈÈç£º
+		//æŠŠå»è®¿é—®ConcreteElementAæ—¶ï¼Œéœ€è¦æ‰§è¡Œçš„åŠŸèƒ½å®ç°åœ¨è¿™é‡Œ
+		//å¯èƒ½éœ€è¦è®¿é—®å…ƒç´ å·²æœ‰çš„åŠŸèƒ½ï¼Œæ¯”å¦‚ï¼š
 		System.out.println("ConcreteVisitor1  ==visitConcreteElementA");
 		element.opertionA();
 	}
 	public void visitConcreteElementB(ConcreteElementB element) {
-		//°ÑÈ¥·ÃÎÊConcreteElementBÊ±£¬ĞèÒªÖ´ĞĞµÄ¹¦ÄÜÊµÏÖÔÚÕâÀï
-		//¿ÉÄÜĞèÒª·ÃÎÊÔªËØÒÑÓĞµÄ¹¦ÄÜ£¬±ÈÈç£º
+		//æŠŠå»è®¿é—®ConcreteElementBæ—¶ï¼Œéœ€è¦æ‰§è¡Œçš„åŠŸèƒ½å®ç°åœ¨è¿™é‡Œ
+		//å¯èƒ½éœ€è¦è®¿é—®å…ƒç´ å·²æœ‰çš„åŠŸèƒ½ï¼Œæ¯”å¦‚ï¼š
 		element.opertionB();
 	}
 }

@@ -2,10 +2,10 @@ package cn.javass.dp.factorymethod.example3;
 
 public class Client {
 	public static void main(String[] args) {
-//		//´´½¨ĞèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+//		//åˆ›å»ºéœ€è¦ä½¿ç”¨çš„Creatorå¯¹è±¡
 //		ExportOperate operate = new ExportXmlFileOperate();
-//		//µ÷ÓÃÊä³öÊı¾İµÄ¹¦ÄÜ·½·¨
-//		operate.export("²âÊÔÊı¾İ");
+//		//è°ƒç”¨è¾“å‡ºæ•°æ®çš„åŠŸèƒ½æ–¹æ³•
+//		operate.export("æµ‹è¯•æ•°æ®");
 		
 //		ABC abc = new ExportOperate().createABC("cc");
 		

@@ -1,10 +1,10 @@
 package cn.javass.dp.facade.example4;
 
 public interface AModuleApi {
-	//提供给子系统外部使用
+	//鎻愪緵缁欏瓙绯荤粺澶栭儴浣跨敤
 	public void a1();
 	
-	//提供给同一个子系统中，不同的模块使用，比如给B模块，给C模块
+	//鎻愪緵缁欏悓涓�涓瓙绯荤粺涓紝涓嶅悓鐨勬ā鍧椾娇鐢紝姣斿缁橞妯″潡锛岀粰C妯″潡
 	public void a2();
 	public void a3();
 }
