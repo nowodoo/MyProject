@@ -1,14 +1,14 @@
-normalVoteState2ʵ���Ƕ�mormalVoteState����չ��������ʵ��һ����
-����������ԭ�����Ҫ��ԭ�е�normalVoteState���������µ��߼�������������Ҫ�޸ġ�
-������VoteManager��Ҳ����Ҫ�޸���Ӧ�Ĵ��룬���ж�״̬��ʱ����Ҫ��ԭ�ȵ����滻��������VoteManager���ж�״̬��ʱ����Ҫ����һ�����ࣩ
+normalVoteState2实际是对mormalVoteState的扩展，两个其实是一个。
+添加这个类的原因就是要在原有的normalVoteState上添加了新的逻辑，所以这里需要修改。
+但是在VoteManager中也是需要修改相应的代码，在判断状态的时候，需要把原先的类替换掉（就是VoteManager中判断状态的时候需要添加一个新类）
 
-voteManager��voteManager2������ֻ��Ҫ����һ���ͺ��ˣ�����clientֻ�ǵ�������һ����
+voteManager和voteManager2这两个只需要关心一个就好了，这里client只是调用其中一个。
 
-����voteManagerֻ��״̬��һ�������İ��ˡ�
+这里voteManager只是状态的一个上下文罢了。
 
-�жϵ��߼���voteManager���棬�ñ�־ȥ�ж�����ʲô״̬����
+判断的逻辑在voteManager里面，用标志去判断生成什么状态对象。
 
-ʹ��client����voteManager.
+使用client调用voteManager.
 
 over
 

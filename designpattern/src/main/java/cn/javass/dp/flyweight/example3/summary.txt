@@ -1,13 +1,13 @@
 1.
-ÕâÀïµÄloginÃ»ÓÐÓÃ»§ÃûºÍÃÜÂëµÄÑéÖ¤£¬Ö»ÊÇÓÃÓÃ»§Ãû¾Í¿ÉÒÔÖ±½ÓµÇÂ¼¡£
+è¿™é‡Œçš„loginæ²¡æœ‰ç”¨æˆ·åå’Œå¯†ç çš„éªŒè¯ï¼Œåªæ˜¯ç”¨ç”¨æˆ·åå°±å¯ä»¥ç›´æŽ¥ç™»å½•ã€‚
 
 
 2.
-queryByUser¾ÍÊÇÈ¥±éÀúÊý¾Ý¿â£¬½«ÓÃ»§¶ÔÓ¦µÄËùÓÐµÄÏíÔª¶ÔÏóÈ¡³öÀ´¡£
+queryByUserå°±æ˜¯åŽ»éåŽ†æ•°æ®åº“ï¼Œå°†ç”¨æˆ·å¯¹åº”çš„æ‰€æœ‰çš„äº«å…ƒå¯¹è±¡å–å‡ºæ¥ã€‚
 
 
 3.
-FlyeweightFactoryÀïÃæµÄfsMapÆäÊµ¾ÍÊÇÒ»¸ö»º´æ¶ÔÏó£¬Ö±½Ó½«¶ÔÏó·ÅÔÚÀïÃæ¾ÍºÃÁË¡£ÕâÀïÔÚ
-Èç¹ûÕâ¸ö»º´æÀïÃæÃ»ÓÐ¾ÍÖ±½Ó´´½¨Ò»¸ö¾ÍÊÇnewÒ»¸ö¡£
+FlyeweightFactoryé‡Œé¢çš„fsMapå…¶å®žå°±æ˜¯ä¸€ä¸ªç¼“å­˜å¯¹è±¡ï¼Œç›´æŽ¥å°†å¯¹è±¡æ”¾åœ¨é‡Œé¢å°±å¥½äº†ã€‚è¿™é‡Œåœ¨
+å¦‚æžœè¿™ä¸ªç¼“å­˜é‡Œé¢æ²¡æœ‰å°±ç›´æŽ¥åˆ›å»ºä¸€ä¸ªå°±æ˜¯newä¸€ä¸ªã€‚
 
 4.

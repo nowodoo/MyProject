@@ -1,14 +1,14 @@
-��һ��umlͼ�������ˣ�ע��PaymentContext2�ڹ����ʱ����Ҫ�ȹ���һ�¸���PaymentContext��
-PaymentContext2�̳���PaymentContext��������չԭ�ȵ������ġ�
-PaymentContext2��չֻ��ͨ�����캯��������չ��
+看一下uml图就明白了，注意PaymentContext2在构造的时候需要先构造一下父类PaymentContext。
+PaymentContext2继承了PaymentContext，用来扩展原先的上下文。
+PaymentContext2扩展只是通过构造函数进行扩展。
 
 
-��Ҫ�����Դ��������ģ�����������ִ������Ĳ��Եġ�
+需要将策略传给上下文，是用上下文执行里面的策略的。
 
-paymentcontext2 & card2�ֱ���������չ��ʽ��һ���Ǹı���������չ����һ���Ǹı���Խ�����չ��
+paymentcontext2 & card2分别是另种扩展形式。一种是改变上下文扩展，另一种是改变策略进行扩展。
 
-���ַ�ʽ��client�������ĺ�strategy ����������������Դ��ݸ������ģ�Ȼ����������ĵķ�����
+这种方式是client将上下文和strategy 结合了起来。将策略传递给上下文，然后调用上下文的方法。
 
-������Ծ���һЩ���еķ��������ǲ��е�if else֮��������ˡ�
+这里策略就是一些并行的方法，就是并列的if else之类的语句罢了。
 
 
