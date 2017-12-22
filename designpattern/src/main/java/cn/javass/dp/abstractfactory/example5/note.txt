@@ -1,1 +1,6 @@
-1.BusinessObject 这里就是client, 可以说之前的client都在模仿业务模型。
+1.
+BusinessObject 这里就是client, 可以说之前的client都在模仿业务模型。
+
+
+2.
+over
