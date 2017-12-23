@@ -21,6 +21,10 @@
 
 
 5.
+按照uml的图示，就是director通过该builde接口调用真实的builder就好了。
+
+
+6.
 over
 
 
