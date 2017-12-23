@@ -3,4 +3,5 @@ BusinessObject 这里就是client, 可以说之前的client都在模仿业务模
 
 
 2.
+这个主要是用来切换产品簇的。
 over
