@@ -2,4 +2,7 @@
 抽象出共有的步骤，然后特殊的步骤使用子类去完成就好了。
 
 2.
+第一次使用模板方法将登陆过程重写。
+主要是使用client调用LoginTemplate（父类），然后不同的算法写在子类（normalLogin和NormalLogin2、WorkerLogin）。
+
 over
