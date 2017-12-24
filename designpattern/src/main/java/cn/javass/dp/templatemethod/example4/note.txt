@@ -5,4 +5,6 @@
 第一次使用模板方法将登陆过程重写。
 主要是使用client调用LoginTemplate（父类），然后不同的算法写在子类（normalLogin和NormalLogin2、WorkerLogin）。
 
+
+3.在虚类里面已经有共有的方法了。这些就是公共的。
 over
