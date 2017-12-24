@@ -1,0 +1,6 @@
+1.
+讲解了java comparator如何使用模板方法的例子。
+
+
+2.
+over
