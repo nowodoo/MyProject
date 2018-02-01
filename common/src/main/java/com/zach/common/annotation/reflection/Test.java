@@ -7,14 +7,23 @@ import java.lang.reflect.Method;
 
 public class Test {
     public static void main(String[] args) throws Exception {
+
+        String packageName = "com.zach.common.annotation.reflection";
+
         //取得Injection的类描述类  
         Class<Injection> clazz = Injection.class;  //clazz是injection
         //取得所有的字段描述对象  
         Field[] fields = clazz.getDeclaredFields();  //这里的fields是person等属性。 这里方法什么的是不算的，只算属性
+
+        //获取类赴日
+        Annotation[] classAnnotations = clazz.getAnnotations();
+        for (int i = 0; i < classAnnotations.length; i++) {
+            System.out.println(classAnnotations[i].annotationType().getName());
+        }
+
         System.out.println(fields.length);
         for (Field field : fields) {
-
-            //取得每个字段上面的注解对象  
+            //取得每个字段上面的注解对象
             Annotation[] annotations = field.getDeclaredAnnotations();  //获取字段上的所有的注解
 
             System.out.println(annotations.length);
@@ -23,13 +32,14 @@ public class Test {
             for (Annotation annotation : annotations) {
                 //判断注解对象是不是SelfAnnotation类型的
                 if (annotation.annotationType() == SelfAnnotation.class) {
+                    System.out.println(annotation.annotationType().getName());
                     System.out.println("yes");
 
                     //就是获取注解的一个属性值
                     String beanName = ((SelfAnnotation) annotation).name();
 
                     //生成一个Peron的类描述类  
-                    Class<?> cc = Class.forName("com.zach.annotation.reflection." + beanName);
+                    Class<?> cc = Class.forName(packageName + "." + beanName);
                     //生成一个Person对象
                     Object ob = cc.newInstance();
                     System.out.println(field.getName());  //person
@@ -58,7 +68,7 @@ public class Test {
 
                     //基本和上面的一样
                     //生成Person对象时，反射调用了带参数的构造
-                    Class<?> c2 = Class.forName("com.zach.annotation.reflection." + beanName);
+                    Class<?> c2 = Class.forName(packageName + "." + beanName);
                     Class<?>[] ptype = new Class[]{String.class, Integer.class};
                     Constructor<?> ctor = c2.getConstructor(ptype);
                     Object[] obj = new Object[]{new String("lxq"), new Integer(25)};
