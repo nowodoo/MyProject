@@ -70,7 +70,7 @@ public class ZipUtils {
           try {
               entry = (ZipEntry) entries.nextElement();
           } catch (Exception e) {
-              logger.error("请检查文件编码，UTF-8 or GBK !");
+              logger.error("请检查文件编码，UTF-8 or GBK !", e);
           }
           //重新定义文件名称
           File file = new File(targetDir, File.separator + entry.getName());
