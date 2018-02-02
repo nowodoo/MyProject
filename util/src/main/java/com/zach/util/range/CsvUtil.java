@@ -4,10 +4,10 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.io.IOUtils;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.List;
 
 public class CsvUtil {
@@ -22,20 +22,23 @@ public class CsvUtil {
      * @param headers csv列头
      * @return CSVRecord 列表
      * @throws IOException **/
-    public static List<CSVRecord> readCSV(String filePath, String[] headers) throws IOException {
+    public static List<CSVRecord> readCSV(String filePath, String[] headers, String charset) throws IOException {
 
         //创建CSVFormat
         CSVFormat formator = CSVFormat.DEFAULT.withHeader(headers);
 
-        FileReader fileReader=new FileReader(filePath);
+        InputStream inputStream = new FileInputStream(filePath);
+        InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName(charset));  //读取文件的时候将流设置为 自定义
+
 
         //创建CSVParser对象
-        CSVParser parser=new CSVParser(fileReader,formator);
+        CSVParser parser=new CSVParser(inputStreamReader,formator);
 
         List<CSVRecord> records=parser.getRecords();
 
         parser.close();
-        fileReader.close();
+        IOUtils.closeQuietly(inputStream);
+        IOUtils.closeQuietly(inputStreamReader);
 
         return records;
     }
