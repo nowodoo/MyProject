@@ -14,7 +14,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 
 public class RetryTest {
-    public static final Logger logger = LoggerFactory.getLogger(RetryTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(RetryTest.class);
 
     @Test
     public void retryTest() {
