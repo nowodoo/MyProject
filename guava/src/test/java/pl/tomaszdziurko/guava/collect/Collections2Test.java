@@ -12,7 +12,6 @@ import pl.tomaszdziurko.guava.geo.Country;
 
 import javax.annotation.Nullable;
 import java.util.*;
-import java.util.concurrent.LinkedBlockingQueue;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -23,7 +22,6 @@ public class Collections2Test {
 
     @Test
     public void shouldTransformCollection() throws Exception {
-
         //这里是将一个集合集合进行转换，返回另一个形式的集合罢了。
 
         // given
@@ -68,6 +66,7 @@ public class Collections2Test {
     public void shouldShowThatResultIsOnlyAView() throws Exception {
 
         //其实就是实现了过滤和重定向的功能，将一个集合重定向为另一个集合，当过滤条件非常复杂的时候，那么这个时候，他的优势就很突出了。
+        //collection transform function
 
         // given
         ArrayList<Country> countries = Lists.newArrayList(Country.POLAND, Country.BELGIUM, Country.ENGLAND);

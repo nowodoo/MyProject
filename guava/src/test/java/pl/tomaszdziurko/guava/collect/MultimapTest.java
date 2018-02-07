@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -88,7 +89,25 @@ public class MultimapTest {
     public void multiKeyTest() throws Exception {
     }
 
+    @Test
+    public void commonMapTest() throws Exception {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("6", "1");
 
+        //测试map没有数值，就会范围null
+        String s = map.get("2");
+        System.out.println(s);
+    }
 
+    @Test
+    public void commonCurrentMapTest() throws Exception {
+        ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
+        map.put("6", "1");
+        map.put("6", "1");
 
+        //测试map没有数值，就会范围null
+        String s = map.get("2");
+        System.out.println(s);
+
+    }
 }
