@@ -77,7 +77,7 @@ public class GuavaFileTest {
         Files.append(hamletQuoteEnd, file, Charsets.UTF_8); //追加文件
 
         String overwrite = "Overwriting the file";
-        Files.write(overwrite, file, Charsets.UTF_8); //重写文件
+        Files.write(overwrite, file, Charsets.UTF_8); //重写文
     }
 
     /**
