@@ -16,6 +16,7 @@ public class SpiTest {
         Iterator it = Service.providers(SPIService.class);
 
 
+        //找到 meta-inf下面service的文件    文件名字是接口的名字  里面的类是接口的实现
         while (it.hasNext()) {
             SPIService service = (SPIService) it.next();
             service.spiTest();
