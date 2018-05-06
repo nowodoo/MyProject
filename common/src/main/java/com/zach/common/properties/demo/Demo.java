@@ -11,6 +11,12 @@ public class Demo {
             Properties properties = PropertiesUtils.readProperties(filePath);
 
 
+            for (int i = 0; i < 2; i++) {
+                System.out.println("\r\n");
+            }
+            System.out.println("#开发环境");
+
+
             /**
              * dev环境
              */
@@ -27,6 +33,7 @@ public class Demo {
             for (int i = 0; i < 2; i++) {
                 System.out.println("\r\n");
             }
+            System.out.println("#测试环境");
 
             
             /**
@@ -44,6 +51,7 @@ public class Demo {
             for (int i = 0; i < 2; i++) {
                 System.out.println("\r\n");
             }
+            System.out.println("#灰发环境");
 
 
             /**
@@ -52,11 +60,17 @@ public class Demo {
             Map<String, String> preZkValues = new HashMap<>();
             preZkValues.put("dubbo.base.zk", "172.24.1.11:2481?backup=172.24.1.12:2481,172.24.1.13:2481");
             preZkValues.put("dubbo.gw.zk", "172.24.1.11:2381?backup=172.24.1.12:2381,172.24.1.13:2381");
-            preZkValues.put("dubbo.common.zk", "72.24.0.6:2185?backup=172.24.0.7:2185,172.24.0.8:2185");
+            preZkValues.put("dubbo.common.zk", "72.24.0.6:2185?backup=172.24.0.7:2185,172.24.0.8:2185");     //这是线上的
             preZkValues.put("dubbo.business.zk", "172.24.0.6:2186?backup=172.24.0.7:2186,172.24.0.8:2186");
             for (Map.Entry<String, String> item : preZkValues.entrySet()) {
                 System.out.println(item.getKey() + "=" + item.getValue());
             }
+
+
+            for (int i = 0; i < 2; i++) {
+                System.out.println("\r\n");
+            }
+            System.out.println("#线上环境");
 
 
             /**
@@ -65,7 +79,7 @@ public class Demo {
             Map<String, String> onlineZkValues = new HashMap<>();
             onlineZkValues.put("dubbo.base.zk", "172.24.1.11:2281?backup=172.24.1.12:2281,172.24.1.13:2281");
             onlineZkValues.put("dubbo.gw.zk", "172.24.1.11:2181?backup=172.24.1.12:2181,172.24.1.13:2181");
-            preZkValues.put("dubbo.common.zk", "172.24.0.6:2185?backup=172.24.0.7:2185,172.24.0.8:2185");
+            onlineZkValues.put("dubbo.common.zk", "172.24.0.6:2185?backup=172.24.0.7:2185,172.24.0.8:2185");
             onlineZkValues.put("dubbo.business.zk", "172.24.0.6:2181?backup=172.24.0.7:2181,172.24.0.8:2181");
             for (Map.Entry<String, String> item : onlineZkValues.entrySet()) {
                 System.out.println(item.getKey() + "=" + item.getValue());
