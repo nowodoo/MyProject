@@ -35,7 +35,17 @@
             <artifactId>joda-time</artifactId>
             <version>2.9.9</version>
         </dependency>
-        <!--spi-->
 
+        <!--&lt;!&ndash;相同的类的测试&ndash;&gt;-->
+        <!--<dependency>d-->
+            <!--<groupId>com.dianwoba.mservice-two</groupId>-->
+            <!--<artifactId>reward-gw-api</artifactId>-->
+            <!--<version>1.0.7-SNAPSHOT</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.dianwoba.mservice-two</groupId>-->
+            <!--<artifactId>reward-unit-api</artifactId>-->
+            <!--<version>1.0.7-SNAPSHOT</version>-->
+        <!--</dependency>-->
     </dependencies>
 </project>

@@ -5,7 +5,8 @@ import java.util.List;
 
 public class DataUtil {
     public static List<DataBean> createData() {
-        List<DataBean> datas = new ArrayList<>();
+        List<DataBean> datas = new ArrayList<DataBean>();
+
         for (int i = 0; i < 100; i++) {
             DataBean dataBean = new DataBean();
             dataBean.setId(i);

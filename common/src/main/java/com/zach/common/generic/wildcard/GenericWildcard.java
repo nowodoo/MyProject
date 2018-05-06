@@ -1,6 +1,7 @@
 package com.zach.common.generic.wildcard;
 
-import com.sun.tools.javac.util.List;
+
+import java.util.List;
 
 /**
  * 泛型通配符的例子，泛型通配符只是对泛型的范围做一个限制。

@@ -18,6 +18,8 @@
         <module>jvm</module>
         <module>designpattern</module>
         <module>util</module>
+        <module>aestool</module>
+        <module>springsourcecode</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -109,4 +111,17 @@
             <version>2.10.0</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
