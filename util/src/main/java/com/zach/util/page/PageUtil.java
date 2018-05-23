@@ -11,6 +11,11 @@ import java.util.List;
 public final class PageUtil {
 
     public static List<PageBean> getPageList(int count, int step) {
+
+        if (count < 0 || step < 0) {
+            throw new RuntimeException("数值不允许为0!");
+        }
+
         List<PageBean> list = new ArrayList<>();
         int pageNum = (count / step) + ((count > 0 && (0 != count % step)) ? 1 : 0);
 
