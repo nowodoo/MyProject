@@ -7,8 +7,11 @@ import java.util.Properties;
 public class Demo {
     public static void main(String[] args) {
         try {
-            String filePath = "/Users/zach/Workspace/code/idea/dwd/dwd-recharge-service/recharge-gw-service-server/src/main/resources/config/application-try.properties";
-            Properties properties = PropertiesUtils.readProperties(filePath);
+            try {
+                String filePath = "/Users/zach/Workspace/code/idea/dwd/dwd-recharge-service/recharge-gw-service-server/src/main/resources/config/application-try.properties";
+                Properties properties = PropertiesUtils.readProperties(filePath);
+            } catch (Exception e) {
+            }
 
 
             for (int i = 0; i < 2; i++) {
