@@ -11,12 +11,12 @@ import com.zach.bytecode.cglib.proxy.CglibObjectProxy;
 public class App {
     public static void main(String[] args) {
         //  未实现接口的类的代理
-        Person proxyPerson=(Person) CglibObjectProxy.ceateProxtObject(new Person(),Person.class);
+        Person proxyPerson = (Person) CglibObjectProxy.ceateProxtObject(new Person(), Person.class);
         proxyPerson.see("apple");
 
 
         // 实现接口的类的代理
-        IAnimal proxyDog=(IAnimal) CglibObjectProxy.ceateProxtObject(new Dog(),Dog.class);
+        IAnimal proxyDog = (IAnimal) CglibObjectProxy.ceateProxtObject(new Dog(), Dog.class);
         proxyDog.see("bread");
 
     }
