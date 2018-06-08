@@ -14,7 +14,6 @@
         <module>springData</module>
         <module>rocketmq</module>
         <module>multithread</module>
-        <module>pic</module>
         <module>jvm</module>
         <module>designpattern</module>
         <module>util</module>
