@@ -10,6 +10,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * reference to: http://www.baeldung.com/javassist
+ */
 public class App {
     public static void main(String[] args) throws Exception {
         ClassFile cf = ClassPool.getDefault().get("com.zach.bytecode.javassit.pojo.Point").getClassFile();
