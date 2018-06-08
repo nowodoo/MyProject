@@ -1,7 +1,7 @@
 package com.zach.util.range;
 
+import org.junit.Test;
 import org.mozilla.universalchardet.UniversalDetector;
-import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
 import java.io.IOException;

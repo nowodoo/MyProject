@@ -1,8 +1,9 @@
 package com.zach.bytecode.cglib.proxy;
 
-import com.google.inject.internal.cglib.proxy.Enhancer;
-import com.google.inject.internal.cglib.proxy.MethodInterceptor;
-import com.google.inject.internal.cglib.proxy.MethodProxy;
+
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 

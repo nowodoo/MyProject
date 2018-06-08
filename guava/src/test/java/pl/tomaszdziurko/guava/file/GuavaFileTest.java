@@ -4,6 +4,8 @@ import com.google.common.base.Charsets;
 import com.google.common.hash.HashCode;
 import com.google.common.hash.Hashing;
 import com.google.common.io.Files;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -11,6 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class GuavaFileTest {
+    private static Logger logger = LoggerFactory.getLogger(GuavaFileTest.class);
 
     /**
      * 文件复制
@@ -19,9 +22,13 @@ public class GuavaFileTest {
      */
     @Test(expectedExceptions = ArithmeticException.class, expectedExceptionsMessageRegExp = "overflow")
     public void fileCopy() throws Exception {
-        File original = new File("path/to/original");
-        File copy = new File("path/to/copy");
-        Files.copy(original, copy);
+        try {
+            File original = new File("path/to/original");
+            File copy = new File("path/to/copy");
+            Files.copy(original, copy);
+        } catch (Exception e) {
+            logger.error("cann't find file!", e);
+        }
     }
 
     /**
@@ -47,8 +54,12 @@ public class GuavaFileTest {
      */
     @Test(expectedExceptions = ArithmeticException.class, expectedExceptionsMessageRegExp = "overflow")
     public void readFilesToLines() throws Exception {
-        File file = new File("src/main/resources/copy.txt");
-        List<String> readLines = Files.readLines(file, Charsets.UTF_8);
+        try {
+            File file = new File("src/main/resources/copy.txt");
+            List<String> readLines = Files.readLines(file, Charsets.UTF_8);
+        } catch (IOException e) {
+            logger.error("cann't find file!", e);
+        }
     }
 
     /**

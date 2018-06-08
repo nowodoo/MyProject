@@ -1,8 +1,7 @@
 package com.zach.util.range;
 
-import com.google.common.collect.Lists;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;

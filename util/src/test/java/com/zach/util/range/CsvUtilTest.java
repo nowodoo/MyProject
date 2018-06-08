@@ -1,12 +1,10 @@
 package com.zach.util.range;
 
 import org.apache.commons.csv.CSVRecord;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class CsvUtilTest {
     @Test
@@ -15,9 +13,6 @@ public class CsvUtilTest {
         try {
             String path = this.getClass().getResource("/files").getPath();
             List<CSVRecord> csvRecords = CsvUtil.readCSV(path+"/test.csv", headers, "GBK");
-
-            long objectSize = ObjectSizeFetcher.getObjectSize(csvRecords);
-
 
             System.out.println(1);
         } catch (IOException e) {
