@@ -36,6 +36,11 @@
             <version>2.9.9</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+        </dependency>
+
         <!--&lt;!&ndash;相同的类的测试&ndash;&gt;-->
         <!--<dependency>d-->
             <!--<groupId>com.dianwoba.mservice-two</groupId>-->
