@@ -20,6 +20,7 @@
         <module>aestool</module>
         <module>springsourcecode</module>
         <module>bytecode</module>
+        <module>dubbo</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -132,6 +133,23 @@
                 <artifactId>asm-util</artifactId>
                 <version>6.0</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot</artifactId>
+                <version>1.5.9.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>1.5.9.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>2.7</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
