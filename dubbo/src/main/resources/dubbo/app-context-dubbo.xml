@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- consumer application name -->
+	<dubbo:application name="dubbo-service" logger="slf4j" />
+	<dubbo:protocol name="dubbo" threadpool="fixed" dispatcher="message" port="${dubbo.protocol.port}" threads="100" accesslog="true" />
+	<!-- common -->
+	<dubbo:registry id="common" address="zookeeper://${dubbo.common.zk}" />
+	<!-- unit -->
+	<dubbo:registry id="unit" address="zookeeper://${dubbo.unit.zk}" default="true" />
+	<!-- gw -->
+	<dubbo:registry id="gw" address="zookeeper://${dubbo.gw.zk}"/>
+
+
+	<!-- 默认消费zk -->
+	<dubbo:consumer registry="unit" check="false" retries="0" timeout="5000" />
+
+
+	<dubbo:monitor protocol="registry" />
+
+</beans>
