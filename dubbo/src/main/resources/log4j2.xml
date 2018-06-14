@@ -80,8 +80,9 @@
 
 		<Logger name="com.dianwoba" level="debug" />
 
-		<Root level="info">
-			<AppenderRef ref="Console" level="${sys:logging.console.level:-off}" />
+		<Root level="debug">
+			<!--<AppenderRef ref="Console" level="${sys:logging.console.level:-off}" />-->
+			<AppenderRef ref="Console"/>
 			<AppenderRef ref="RollingRandomAccessFile" />
 			<AppenderRef ref="RollingRandomAccessFileWarn" />
 			<AppenderRef ref="RollingRandomAccessFileError" />

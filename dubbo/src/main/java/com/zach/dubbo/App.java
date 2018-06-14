@@ -14,7 +14,8 @@ public class App {
     private static Logger logger = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext ctx = new SpringApplicationBuilder(App.class).profiles("dwd-dev").build(args).run(args);
+        ConfigurableApplicationContext ctx = new SpringApplicationBuilder(App.class).profiles("dev").build(args).run(args);
         logger.info("dubbo-service started !!!!");
+        System.out.println("dubbo-service started !!!!");
     }
 }
