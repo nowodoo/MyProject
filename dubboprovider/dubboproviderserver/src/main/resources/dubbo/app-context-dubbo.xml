@@ -11,6 +11,7 @@
 	<dubbo:registry id="unit" address="zookeeper://${dubbo.unit.zk}" default="true" />
 
 	<!-- 默认消费zk -->
+	<dubbo:provider registry="unit"  retries="2" timeout="5000" />
 	<dubbo:consumer registry="unit" check="false" retries="0" timeout="5000" />
 	<!--<dubbo:monitor protocol="registry" />-->
 

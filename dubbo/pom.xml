@@ -23,6 +23,17 @@
     </properties>
 
     <dependencies>
+        <!-- spring boot 这里必须是有tomcat的,要不就会直接退出的 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>1.5.9.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.zach.dubboproviderapi</groupId>
             <artifactId>dubboproviderapi</artifactId>

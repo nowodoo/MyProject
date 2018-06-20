@@ -11,9 +11,10 @@
 
 
 	<!-- 默认消费zk -->
+	<dubbo:provider registry="unit"  retries="0" timeout="5000" />
 	<dubbo:consumer registry="unit" check="false" retries="0" timeout="5000" />
 
 
-	<dubbo:monitor protocol="registry" />
+	<!--<dubbo:monitor protocol="registry" />-->
 
 </beans>
