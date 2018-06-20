@@ -23,6 +23,20 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.0-api -->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>1.0.1.Final</version>
+        </dependency>
+
+        <!--这里的dubbo provider是不是有问题,只要是添加了版本就无法打开.还是说压根版本就不对-->
+        <dependency>
+            <groupId>com.zach.dubboprovider</groupId>
+            <artifactId>dubboprovider</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.101tec/zkclient -->
         <dependency>
             <groupId>com.101tec</groupId>
@@ -75,6 +89,10 @@
                     <artifactId>hibernate-validator</artifactId>
                     <groupId>org.hibernate</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -102,14 +120,32 @@
                     <groupId>org.springframework</groupId>
                     <artifactId>spring</artifactId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>spring-core</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-context</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-web</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-aop</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-expression</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-beans</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
             </exclusions>
             <version>2.5.10-self-SHAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.dianwoba.mservice-two</groupId>
-            <artifactId>coupon-service-api</artifactId>
-            <version>1.1.4-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
