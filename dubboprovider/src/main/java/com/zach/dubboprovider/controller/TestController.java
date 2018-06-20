@@ -1,4 +1,4 @@
-package com.zach.dubbo.controller;
+package com.zach.dubboprovider.controller;
 
 import com.dianwoba.optimus.coupon.param.ValidationParam;
 import com.dianwoba.optimus.coupon.provider.user.CouponUseProvider;
@@ -12,8 +12,8 @@ import javax.annotation.Resource;
 public class TestController {
 
 
-//    @Resource
-//    CouponUseProvider couponUseProvider;
+    @Resource
+    CouponUseProvider couponUseProvider;
 
 
     /**
@@ -37,7 +37,7 @@ public class TestController {
         validationParam.setUserId(0L);
 
 
-//        couponUseProvider.paramTest(validationParam);
+        couponUseProvider.paramTest(validationParam);
         return "Hello Zach!";
     }
 }

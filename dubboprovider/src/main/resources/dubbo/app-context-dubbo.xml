@@ -7,7 +7,10 @@
 	<!-- consumer application name -->
 	<dubbo:application name="dubbo-service" logger="slf4j" />
 	<dubbo:protocol name="dubbo" threadpool="fixed" dispatcher="message" port="${dubbo.protocol.port}" threads="100" accesslog="true" />
+	<!-- common unit gw-->
+	<dubbo:registry id="common" address="zookeeper://${dubbo.common.zk}" />
 	<dubbo:registry id="unit" address="zookeeper://${dubbo.unit.zk}" default="true" />
+	<dubbo:registry id="gw" address="zookeeper://${dubbo.gw.zk}"/>
 
 
 	<!-- 默认消费zk -->

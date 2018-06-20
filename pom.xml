@@ -21,6 +21,7 @@
         <module>springsourcecode</module>
         <module>bytecode</module>
         <module>dubbo</module>
+        <module>dubboprovider</module>
     </modules>
     <packaging>pom</packaging>
 
