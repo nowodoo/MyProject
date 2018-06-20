@@ -11,6 +11,7 @@
 
     <groupId>com.zach.dubboproviderapi</groupId>
     <artifactId>dubboproviderapi</artifactId>
+    <packaging>jar</packaging>
 
     <name>dubboproviderapi</name>
 

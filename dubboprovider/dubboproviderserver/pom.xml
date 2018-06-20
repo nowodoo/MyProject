@@ -27,6 +27,14 @@
             <!--<artifactId>dubboproviderapi</artifactId>-->
             <!--<version>1.0-SNAPSHOT</version>-->
         <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.0-api -->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>1.0.1.Final</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.101tec/zkclient -->
         <dependency>
             <groupId>com.101tec</groupId>
@@ -41,32 +49,27 @@
                     <groupId>org.slf4j</groupId>
                 </exclusion>
             </exclusions>
-            <optional>true</optional>
         </dependency>
         <!--参数验证-->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>1.0.0.GA</version>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>4.2.0.Final</version>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot</artifactId>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -84,13 +87,15 @@
                     <artifactId>hibernate-validator</artifactId>
                     <groupId>org.hibernate</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
             </exclusions>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <optional>true</optional>
         </dependency>
         <!-- Spring Boot log4j依赖 -->
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2 -->
@@ -103,7 +108,6 @@
                     <groupId>org.slf4j</groupId>
                 </exclusion>
             </exclusions>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -115,15 +119,19 @@
                     <artifactId>spring</artifactId>
                 </exclusion>
                 <exclusion>
-                    <artifactId>spring-web</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-                <exclusion>
                     <artifactId>spring-core</artifactId>
                     <groupId>org.springframework</groupId>
                 </exclusion>
                 <exclusion>
                     <artifactId>spring-context</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-web</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-aop</artifactId>
                     <groupId>org.springframework</groupId>
                 </exclusion>
                 <exclusion>
@@ -134,13 +142,8 @@
                     <artifactId>spring-beans</artifactId>
                     <groupId>org.springframework</groupId>
                 </exclusion>
-                <exclusion>
-                    <artifactId>spring-aop</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
             </exclusions>
             <version>2.5.10-self-SHAPSHOT</version>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
