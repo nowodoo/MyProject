@@ -132,8 +132,14 @@
                     <artifactId>spring</artifactId>
                 </exclusion>
             </exclusions>
+            <version>2.5.10-self-SHAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.dianwoba.mservice-two</groupId>
+            <artifactId>coupon-service-api</artifactId>
+            <version>1.1.4-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
