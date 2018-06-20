@@ -5,6 +5,6 @@
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<!--just because the ref property start with capital form but not lowercase, so it can't start-->
-	<dubbo:service interface="com.zach.dubboprovider.api.ValidateProvider" ref="validateProviderImpl" version="1.0.0" />
+	<dubbo:service interface="com.zach.dubboprovider.api.ValidateProvider" ref="validateProviderImpl" version="1.0.0" validation="true"/>
 
 </beans>

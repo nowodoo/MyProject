@@ -26,6 +26,6 @@ public class TestController {
 
 
         boolean b = validateProvider.paramValidate(validateParam);
-        return "Hello Zach!";
+        return "Hello Zach!" + b;
     }
 }
