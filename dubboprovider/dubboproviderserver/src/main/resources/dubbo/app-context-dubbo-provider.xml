@@ -4,6 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-	<!--<dubbo:service interface="com.zach.dubboprovider.api.ValidateProvider" ref="ValidateProviderImpl" version="1.0.0" />-->
+	<!--just because the ref property start with capital form but not lowercase, so it can't start-->
+	<dubbo:service interface="com.zach.dubboprovider.api.ValidateProvider" ref="validateProviderImpl" version="1.0.0" />
 
 </beans>
