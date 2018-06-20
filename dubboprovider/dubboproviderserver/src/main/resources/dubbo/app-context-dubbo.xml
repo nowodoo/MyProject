@@ -5,18 +5,13 @@
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<!-- consumer application name -->
-	<dubbo:application name="dubbo-service" logger="slf4j" />
+	<dubbo:application name="dubbo-provider" logger="slf4j" />
 	<dubbo:protocol name="dubbo" threadpool="fixed" dispatcher="message" port="${dubbo.protocol.port}" threads="100" accesslog="true" />
 	<!-- common unit gw-->
-	<dubbo:registry id="common" address="zookeeper://${dubbo.common.zk}" />
 	<dubbo:registry id="unit" address="zookeeper://${dubbo.unit.zk}" default="true" />
-	<dubbo:registry id="gw" address="zookeeper://${dubbo.gw.zk}"/>
-
 
 	<!-- 默认消费zk -->
 	<dubbo:consumer registry="unit" check="false" retries="0" timeout="5000" />
-
-
-	<dubbo:monitor protocol="registry" />
+	<!--<dubbo:monitor protocol="registry" />-->
 
 </beans>

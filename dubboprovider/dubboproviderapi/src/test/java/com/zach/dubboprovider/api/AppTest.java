@@ -1,4 +1,4 @@
-package com.zach.dubboprovider;
+package com.zach.dubboprovider.api;
 
 import static org.junit.Assert.assertTrue;
 
@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppProviderTest
+public class AppTest 
 {
     /**
      * Rigorous Test :-)
