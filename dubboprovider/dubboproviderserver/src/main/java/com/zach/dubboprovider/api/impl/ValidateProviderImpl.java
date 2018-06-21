@@ -1,5 +1,6 @@
 package com.zach.dubboprovider.api.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.zach.dubboprovider.api.ValidateProvider;
 import com.zach.dubboprovider.dto.ValidateParam;
 import org.slf4j.Logger;
@@ -12,8 +13,13 @@ public class ValidateProviderImpl implements ValidateProvider {
 
     @Override
     public boolean paramValidate(ValidateParam validateParam) {
-        logger.info("hello man !");
+        logger.info("enter paramValidate method:{}", JSON.toJSONString(validateParam));
+        return false;
+    }
 
+    @Override
+    public boolean save(ValidateParam validateParam) {
+        logger.info("enter save method:{}", JSON.toJSONString(validateParam));
         return false;
     }
 }

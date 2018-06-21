@@ -28,4 +28,17 @@ public class TestController {
         boolean b = validateProvider.paramValidate(validateParam);
         return "Hello Zach!" + b;
     }
+
+    /**
+     * curl http://127.0.0.1:8088/TestController/testSave
+     * @return
+     */
+    @RequestMapping("/testSave")
+    public String testSave() {
+        ValidateParam validateParam = new ValidateParam();
+        validateParam.setUserId(4L);
+
+        boolean b = validateProvider.save(validateParam);
+        return "Hello Zach!" + b;
+    }
 }

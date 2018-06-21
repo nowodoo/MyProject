@@ -22,6 +22,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <!-- spring boot 这里必须是有tomcat的,要不就会直接退出的 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

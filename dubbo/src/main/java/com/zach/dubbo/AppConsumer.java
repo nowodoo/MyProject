@@ -10,11 +10,11 @@ import org.springframework.context.ConfigurableApplicationContext;
  * Hello world!
  */
 @SpringBootApplication
-public class App {
-    private static Logger logger = LoggerFactory.getLogger(App.class);
+public class AppConsumer {
+    private static Logger logger = LoggerFactory.getLogger(AppConsumer.class);
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext ctx = new SpringApplicationBuilder(App.class).profiles("dev").build(args).run(args);
+        ConfigurableApplicationContext ctx = new SpringApplicationBuilder(AppConsumer.class).profiles("dev").build(args).run(args);
         logger.info("dubbo-service started !!!!");
     }
 }

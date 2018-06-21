@@ -22,6 +22,10 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
         <!--dubbo validaton-->
         <dependency>
             <groupId>javax.validation</groupId>
