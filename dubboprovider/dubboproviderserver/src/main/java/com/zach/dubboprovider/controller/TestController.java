@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     /**
-     * curl http://127.0.0.1:9099/TestController/test
+     * curl http://localhost:8090/TestController/test
+     * curl http://localhost:8443/TestController/test
      * @return
      */
-//    @RequestMapping("/test")
-//    public String test() {
-//        return "Hello Zach!";
-//    }
+    @RequestMapping("/test")
+    public String test() {
+        return "Hello Zach!";
+    }
 }
