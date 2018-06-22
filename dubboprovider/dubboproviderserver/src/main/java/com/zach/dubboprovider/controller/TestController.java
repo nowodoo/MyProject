@@ -9,7 +9,7 @@ public class TestController {
 
     /**
      * curl http://localhost:8090/TestController/test
-     * curl http://localhost:8443/TestController/test
+     * curl -k  https://localhost:8093/TestController/test
      * @return
      */
     @RequestMapping("/test")
