@@ -6,6 +6,10 @@ package com.zach.util.page;
  * @create 2018-08-28 20:43
  */
 public class TestLost {
+    public static void dev3(String[] args) {
+
+    }
+
     public static void dev1(String[] args) {
 
     }
