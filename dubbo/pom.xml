@@ -23,6 +23,34 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.dianwoba.mservice-two</groupId>
+            <artifactId>coupon-service-api</artifactId>
+            <version>1.1.4-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>rocketmq-constant</artifactId>
+                    <groupId>com.dianwoba.wireless</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>dubbo-base</artifactId>
+                    <groupId>com.dianwoba</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-core</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>rich-service-api</artifactId>
+                    <groupId>com.dianwoba.optimus</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>message-api2</artifactId>
+                    <groupId>com.dianwoba</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!-- spring boot 这里必须是有tomcat的,要不就会直接退出的 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -60,6 +88,10 @@
                     <artifactId>slf4j-api</artifactId>
                     <groupId>org.slf4j</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>zookeeper</artifactId>
+                    <groupId>org.apache.zookeeper</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <!--参数验证-->
@@ -77,6 +109,12 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>hamcrest-core</artifactId>
+                    <groupId>org.hamcrest</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
