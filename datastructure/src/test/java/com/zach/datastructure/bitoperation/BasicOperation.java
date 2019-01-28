@@ -2,6 +2,8 @@ package com.zach.datastructure.bitoperation;
 
 import org.junit.Test;
 
+import java.io.EOFException;
+
 /**
  * @author Zach Ma
  * @description:
@@ -47,11 +49,15 @@ public class BasicOperation {
             System.out.println(appendStr + s);
         }
 
-        //将所有的值进行异或
         Integer eo = 0;
+        System.out.println("");
+        System.out.println("开始打印过程量:");
+        System.out.println("从" + eo + "开始异或.");
         Integer result = 0;
         for (int i = 0; i < 10; i++) {
+            System.out.println("开始异或:" + array[i]);
             result = eo ^ array[i];
+            System.out.println("异或结果:" + result + "二进制结果---->" + Integer.toBinaryString(result));
         }
 
 
