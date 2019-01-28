@@ -23,6 +23,7 @@
         <module>dubbo</module>
         <module>dubboprovider</module>
         <module>akka</module>
+        <module>datastructure</module>
     </modules>
     <packaging>pom</packaging>
 
