@@ -50,5 +50,10 @@ public class Main {
         System.out.println("目标数组结果是: " + new String(dst));  //输出结果:   目标数组结果是: 1him00000
 
 
+        //使用wrap
+        directByteBuffer.flip();
+        byte[] wrap = "20000".getBytes();
+        ByteBuffer result = directByteBuffer.wrap(wrap, 1, 2);
+        System.out.println("wrap之后的结果是:" + new String(wrap));
     }
 }
