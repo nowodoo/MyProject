@@ -29,12 +29,11 @@ public class Main {
 
         System.out.println("开始使用directByteBuffer !");
 
-        //heapByteBuffer
+        //directByteBuffer
         ByteBuffer directByteBuffer = ByteBuffer.allocateDirect(100);
         directByteBuffer.put("himan".getBytes());
-
         directByteBuffer.flip();
-
+        //读取
         for (int i = 0; i < 100; i++) {
             int limit = directByteBuffer.limit();
             if (i < limit) {
@@ -42,11 +41,14 @@ public class Main {
                 System.out.println((char)r);
             }
         }
+        //按照偏移量读取.
+        directByteBuffer.flip();
+        byte[] dst = "100000000".getBytes();
+        ByteBuffer byteBuffer1 = directByteBuffer.get(dst, 1, 3);
+        byte b = byteBuffer1.get();
+        System.out.println("结果是: " + (char) b);
+        System.out.println("目标数组结果是: " + new String(dst));  //输出结果:   目标数组结果是: 1him00000
 
-
-
-
-        //directByteBuffer
 
     }
 }
