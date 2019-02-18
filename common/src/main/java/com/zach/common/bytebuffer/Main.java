@@ -25,5 +25,28 @@ public class Main {
                 System.out.println((char)b);
             }
         }
+
+
+        System.out.println("开始使用directByteBuffer !");
+
+        //heapByteBuffer
+        ByteBuffer directByteBuffer = ByteBuffer.allocateDirect(100);
+        directByteBuffer.put("himan".getBytes());
+
+        directByteBuffer.flip();
+
+        for (int i = 0; i < 100; i++) {
+            int limit = directByteBuffer.limit();
+            if (i < limit) {
+                byte r = directByteBuffer.get();
+                System.out.println((char)r);
+            }
+        }
+
+
+
+
+        //directByteBuffer
+
     }
 }
