@@ -20,20 +20,24 @@ public class Consumer implements Runnable {
 
     public void run() {
         int a = 2;
-        try {
-            for (int i = 0; i < 100; i++) {
+
+        int i = 0;
+        while (i < 100) {
+            try {
                 ((ReentrantLock) map.get("lock")).lock();
-                if (i % 2 == 0) {
+                if (!PrintEventOddTest.flag) {
                     System.out.println(Thread.currentThread().getName() + "-偶数" + i);
+                    PrintEventOddTest.flag = true;
+                    i += 2;
                     ((Condition) map.get("condition")).signal();
-                }else{
+                } else {
                     ((Condition) map.get("condition")).await();
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                ((ReentrantLock) map.get("lock")).unlock();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            ((ReentrantLock) map.get("lock")).unlock();
         }
     }
 }

@@ -20,20 +20,23 @@ public class Consumer implements Runnable {
     public void run() {
 
         try {
-            while (true) {
-                synchronized (lockObject) {
-                    String poll = queue.poll();
-                    if (null == poll) {
-                        lockObject.wait();
-                    }else{
-                        System.out.println("消费者取出的数据:" + poll);
-                    }
+            //使用布隆过滤
+            if (!BloomFilter.filter(1)) {
+                System.out.println("布隆过滤器生效!");
+                return;
+            }
 
+            synchronized (lockObject) {
+                String poll = queue.peek();
+                if (null == poll) {
+                    System.out.println("消费者开始等待!");
+                    lockObject.wait();
+                    String second = queue.peek();
+                    System.out.println("消费者取出的数据:" + second);
+                } else {
+                    System.out.println("消费者取出的数据:" + poll);
                 }
 
-                if (1 == 2) {
-                    break;
-                }
             }
         } catch (Exception e) {
             e.printStackTrace();

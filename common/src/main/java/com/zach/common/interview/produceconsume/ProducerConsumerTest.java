@@ -1,6 +1,8 @@
 package com.zach.common.interview.produceconsume;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author Zach Ma
@@ -13,9 +15,18 @@ public class ProducerConsumerTest {
         ConcurrentLinkedQueue<String> queue = new ConcurrentLinkedQueue<>();
 
         Thread producer = new Thread(new Producer(lockObject, queue));
-        Thread consumer = new Thread(new Consumer(lockObject, queue));
+
+        ExecutorService threadPool = Executors.newFixedThreadPool(50);
+        for (int i = 0; i < 50; i++) {
+            threadPool.execute(new Thread(new Consumer(lockObject, queue)));
+        }
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         producer.start();
-        consumer.start();
     }
 }

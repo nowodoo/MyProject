@@ -10,6 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @create 2019-03-06 16:12
  */
 public class PrintEventOddTest {
+    public static boolean flag = false;
     public static void main(String[] args) {
         ReentrantLock lock = new ReentrantLock();
         Condition condition = lock.newCondition();

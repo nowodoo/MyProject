@@ -20,23 +20,10 @@ public class Producer implements Runnable {
     @Override
     public void run() {
 
-        while (true) {
-            synchronized (lockObject) {
-                boolean offer = queue.offer("1");
-                System.out.println("生产者添加元素,结果:" + offer);
-
-                lockObject.notifyAll();
-
-                if (1 == 2) {
-                    break;
-                }
-            }
-
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        synchronized (lockObject) {
+            boolean offer = queue.offer("1");
+            System.out.println("生产者添加元素,结果:" + offer);
+            lockObject.notifyAll();
         }
     }
 }

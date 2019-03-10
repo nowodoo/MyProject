@@ -1,0 +1,11 @@
+<html>
+<body>
+ 
+<h1>My First Heading</h1>
+ 
+<p>My first paragraph.</p>
+ 
+<form name="punchout_form" method="post" action="https://openapi.alipay.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=DJrwQEwX6KZJzIXQEjGreqlwcRr2k1ZvVeQL%2Bb6QaQffk9Ak4SBZ0IR3zNJYhEUT%2BksZF2UbB71Z7mLuMMDoKP0ua0DV73xidE3%2Bvl2Y2HHSjPqvsr%2FckdE%2B3LYZT7dFUuUeOLJlKvRSNf9ojG%2BH9PyTe6ICqjkjeGOBwk1xt3k%3D&return_url=http%3A%2F%2Fwww.baidu.com&notify_url=http%3A%2F%2Frecharge-unit-service-unit1-qa1-unit1.dwbops.com%2F%2Falipay%2Fuser-charge-notify&version=1.0&app_id=2015122401034868&sign_type=RSA&timestamp=2019-03-06+17%3A22%3A30&alipay_sdk=alipay-sdk-java-dynamicVersionNo&format=json">\n<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;AD60000255-60000255-20190306172230238-Hi0fI&quot;,&quot;total_amount&quot;:&quot;0.01&quot;,&quot;subject&quot;:&quot;点我达门店账户充值(60000255)-测试数据&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;,&quot;body&quot;:&quot;测试-外部接口门店账户充值(60000255)&quot;,&quot;passback_params&quot;:&quot;%7B%22channelBizType%22%3A1%2C%22channelType%22%3A7%2C%22memberId%22%3A60000255%2C%22memberType%22%3A6%7D&quot;}">\n<input type="submit" value="立即支付" style="display:none" >\n</form>\n<script>document.forms[0].submit();</script>
+ 
+</body>
+</html>

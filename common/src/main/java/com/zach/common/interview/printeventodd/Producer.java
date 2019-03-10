@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @description:
  * @create 2019-03-06 16:13
  */
-public class Producer implements Runnable{
+public class Producer implements Runnable {
 
     Map<String, Object> map;
 
@@ -20,20 +20,24 @@ public class Producer implements Runnable{
     @Override
     public void run() {
         int a = 2;
-        try {
-            for (int i = 0; i < 100; i++) {
+        int i = 1;
+        while (i < 100) {
+            try {
                 ((ReentrantLock) map.get("lock")).lock();
-                if (i % 2 != 0) {
-                    ((Condition) map.get("condition")).signal();
+                if (PrintEventOddTest.flag) {
                     System.out.println(Thread.currentThread().getName() + "-奇数" + i);
-                }else{
+                    PrintEventOddTest.flag = false;
+                    i += 2;
+                    ((Condition) map.get("condition")).signal();
+                } else {
                     ((Condition) map.get("condition")).await();
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                ((ReentrantLock) map.get("lock")).unlock();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            ((ReentrantLock) map.get("lock")).unlock();
         }
+
     }
 }
