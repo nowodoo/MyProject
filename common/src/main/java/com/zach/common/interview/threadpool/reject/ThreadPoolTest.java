@@ -31,14 +31,14 @@ public class ThreadPoolTest {
                     TimeUnit.MINUTES,
                     blockingQueue);
             //set up rejection strategy.
-            pool.setRejectedExecutionHandler(new RejectionPolicy());
+            pool.setRejectedExecutionHandler(new CustomRejectionPolicy());
             //set up thread factory
-            pool.setThreadFactory(new ThreadGenerateFactory());
+            pool.setThreadFactory(new CustomThreadFactory());
 
 
             //开始执行任务
             for (int i = 0; i < 200; i++) {
-                pool.execute(new MyTask());
+                pool.execute(new CustomTask());
             }
 
             System.out.println("主线程执行完成!");

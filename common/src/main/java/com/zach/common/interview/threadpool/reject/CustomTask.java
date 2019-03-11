@@ -5,7 +5,7 @@ package com.zach.common.interview.threadpool.reject;
  * @description:
  * @create 2019-03-11 15:29
  */
-public class MyTask implements Runnable{
+public class CustomTask implements Runnable{
     @Override
     public void run() {
         System.out.println("执行自定义任务!");
