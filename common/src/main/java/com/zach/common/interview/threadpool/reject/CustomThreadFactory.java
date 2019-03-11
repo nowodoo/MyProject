@@ -11,6 +11,8 @@ public class CustomThreadFactory implements ThreadFactory {
     @Override
     public Thread newThread(Runnable r) {
         //最关键的一步, 这里要放入任务的.
-        return new Thread(r);
+        Thread thread = new Thread(r);
+        thread.setName("自定义线程!");
+        return thread;
     }
 }
