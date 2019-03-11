@@ -8,6 +8,7 @@ package com.zach.common.interview.threadpool.reject;
 public class CustomTask implements Runnable{
     @Override
     public void run() {
-        System.out.println("执行自定义任务!");
+        System.out.println("执行自定义任务, 任务名称 ----> " + Thread.currentThread().getName());
+//        throw new RuntimeException("乱扔的异常!");
     }
 }
