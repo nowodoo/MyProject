@@ -17,6 +17,8 @@ public class Client {
         while (true) {
             i++;
             String name = "name" + i;
+
+
             String result = server.doWork(name);
             System.out.println(result);
             try {
