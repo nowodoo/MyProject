@@ -1,0 +1,6 @@
+1.
+链的建立在saleHandler里面.
+
+
+2.
+over
