@@ -12,7 +12,7 @@ public class GenericMethod {
      * @param <T>
      * @returnS
      */
-    public <T> T ifThenElse(boolean b, T first, T second) {
-        return b ? first : second;
+    public <T, R, S> R ifThenElse(boolean b, T first, R second, S third) {
+        return second;
     }
 }
