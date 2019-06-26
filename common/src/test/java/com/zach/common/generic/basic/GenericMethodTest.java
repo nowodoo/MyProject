@@ -13,7 +13,7 @@ public class GenericMethodTest {
     @Test
     public void testGenericMethod() {
         GenericMethod genericMethod = new GenericMethod();
-        String result = genericMethod.ifThenElse(false, "1", "2");
-        System.out.println(result);
+//        String result = genericMethod.ifThenElse(false, "1", "2");
+//        System.out.println(result);
     }
 }

@@ -1,0 +1,20 @@
+1.
+facade一层:
+facade(子类)  -> facadeApi(父类)
+
+
+2.
+配置层:
+ConfigManager(配置的上下文) -> ConfigModel(具体的配置)
+
+
+3.
+dao/pesentation/business 这三个是具体的执行类.
+
+
+4.
+使用client通过facade调用三个子类:dao/pesentation/business(配置在这里面)
+
+
+5.
+over

@@ -19,6 +19,30 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>commons-lang</groupId>-->
+<!--            <artifactId>commons-lang</artifactId>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
@@ -43,14 +67,14 @@
 
         <!--&lt;!&ndash;相同的类的测试&ndash;&gt;-->
         <!--<dependency>d-->
-            <!--<groupId>com.dianwoba.mservice-two</groupId>-->
-            <!--<artifactId>reward-gw-api</artifactId>-->
-            <!--<version>1.0.7-SNAPSHOT</version>-->
+        <!--<groupId>com.dianwoba.mservice-two</groupId>-->
+        <!--<artifactId>reward-gw-api</artifactId>-->
+        <!--<version>1.0.7-SNAPSHOT</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>com.dianwoba.mservice-two</groupId>-->
-            <!--<artifactId>reward-unit-api</artifactId>-->
-            <!--<version>1.0.7-SNAPSHOT</version>-->
+        <!--<groupId>com.dianwoba.mservice-two</groupId>-->
+        <!--<artifactId>reward-unit-api</artifactId>-->
+        <!--<version>1.0.7-SNAPSHOT</version>-->
         <!--</dependency>-->
     </dependencies>
 </project>
