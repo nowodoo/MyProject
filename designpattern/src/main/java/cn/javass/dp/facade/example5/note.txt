@@ -13,7 +13,7 @@ dao/pesentation/business 这三个是具体的执行类.
 
 
 4.
-使用client通过facade调用三个子类:dao/pesentation/business(配置在这里面)
+使用client通过facade调用三个子类:dao/pesentation/business(配置在这里面,看自己是不是需要)
 
 
 5.
