@@ -16,4 +16,5 @@ cn.javass.dp.chainofresponsibility.example6.GoodsSaleEbo.sale
 
 
 4.
+关于abstract方法, 这个也是有点接口的作用, 就是必须要子类去实现的.
 over
