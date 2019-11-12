@@ -1,2 +1,77 @@
 1.
 https://www.cnblogs.com/peida/archive/2013/04/24/3036689.html
+
+2.
+讲解注解:
+Target   类、接口、枚举、Annotation类型
+方法、构造方法、成员变量、枚举值
+
+3.
+       1.CONSTRUCTOR:用于描述构造器
+　　　　2.FIELD:用于描述域
+　　　　3.LOCAL_VARIABLE:用于描述局部变量
+　　　　4.METHOD:用于描述方法
+　　　　5.PACKAGE:用于描述包
+　　　　6.PARAMETER:用于描述参数
+　　　　7.TYPE:用于描述类、接口(包括注解类型) 或enum声明
+
+
+4.
+Retention定义了该Annotation被保留的时间长短
+某些Annotation仅出现在源代码中，而被编译器丢弃；而另一些却被编译在class文件中；编译在class文件中的Annotation可能会被虚拟机忽略，而另一些在class被装载时将被读取（请注意并不影响class的执行，因为Annotation与class在使用上是被分离的）。使用这个meta-Annotation可以对 Annotation的“生命周期”限制。
+
+
+5.
+　　　　1.SOURCE:在源文件中有效（即源文件保留）
+　　　　2.CLASS:在class文件中有效（即class保留）
+　　　　3.RUNTIME:在运行时有效（即运行时保留）
+
+6.
+@Documented:
+@Documented用于描述其它类型的annotation应该被作为被标注的程序成员的公共API，
+因此可以被例如javadoc此类的工具文档化。Documented是一个标记注解，没有成员。
+
+
+7.
+@Inherited 元注解是一个标记注解，@Inherited阐述了某个被标注的类型是被继承的。
+如果一个使用了@Inherited修饰的annotation类型被用于一个class，
+则这个annotation将被用于该class的子类。
+
+
+8.
+注解格式:
+public @interface 注解名 {定义体}
+格式:
+　　　　1.所有基本数据类型（int,float,boolean,byte,double,char,long,short)
+　　　　2.String类型
+　　　　3.Class类型
+　　　　4.enum类型
+　　　　5.Annotation类型
+　　　　6.以上所有类型的数组
+
+
+9.
+第一,只能用public或默认(default)这两个访问权修饰.
+第二,参数成员只能用基本类型byte,short,char,int,long,float,double,boolean
+八种基本数据类型和 String,Enum,Class,annotations等数据类型,以及这一些类型的数组.
+例如,String value();这里的参数成员就为String;　
+
+
+10.
+第三,如果只有一个参数成员,最好把参数名称设为"value",后加小括号.
+例:下面的例子FruitName注解就只有一个参数成员。
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface FruitName {
+    String value() default "";
+}
+
+11.
+注解元素的默认值：
+注解元素必须有确定的值
+public int id() default -1;
+
+
+12.
+over
