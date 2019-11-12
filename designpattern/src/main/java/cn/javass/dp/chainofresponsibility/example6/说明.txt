@@ -7,4 +7,13 @@ cn.javass.dp.chainofresponsibility.example6.GoodsSaleEbo.sale
 2.
 一句话总结:
 先设置好了后继, 然后在代码里面调用后继的代码.
+
+
+3.
+结合spring的做法:
+可以在spring里面组成一个链条, 然后返回链条的第一个作为bean.
+调用第一个就可以调用整个链条了.
+
+
+4.
 over
