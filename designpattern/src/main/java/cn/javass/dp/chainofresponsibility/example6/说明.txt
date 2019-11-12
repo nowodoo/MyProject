@@ -5,4 +5,6 @@
 cn.javass.dp.chainofresponsibility.example6.GoodsSaleEbo.sale
 
 2.
+一句话总结:
+先设置好了后继, 然后在代码里面调用后继的代码.
 over
