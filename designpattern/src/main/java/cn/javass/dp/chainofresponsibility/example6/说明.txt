@@ -1,6 +1,8 @@
 1.
 链的建立在saleHandler里面.
 
+这里面是链条的建立.
+cn.javass.dp.chainofresponsibility.example6.GoodsSaleEbo.sale
 
 2.
 over

@@ -24,6 +24,8 @@ public class GoodsSaleEbo {
 		SaleDataCheck sdc = new SaleDataCheck();
 		SaleLogicCheck slc = new SaleLogicCheck();
 		SaleMgr sd = new SaleMgr();
+
+
 		ssc.setSuccessor(sdc);
 		sdc.setSuccessor(slc);
 		slc.setSuccessor(sd);

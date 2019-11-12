@@ -1,7 +1,5 @@
 package cn.javass.dp.visitor.example6;
 
-import java.util.Iterator;
-
 /**
  * 抽象的组件对象，相当于访问者模式中的元素对象
  */
