@@ -169,7 +169,7 @@
                     <groupId>org.springframework</groupId>
                 </exclusion>
             </exclusions>
-            <version>2.5.10-self-SHAPSHOT</version>
+            <version>2.6.9</version>
         </dependency>
     </dependencies>
 
